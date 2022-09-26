@@ -1,5 +1,5 @@
 # README
 
--Comment vas-tu ?
+- Comment vas-tu ?
 
 	Très bien !
