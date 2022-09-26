@@ -1,0 +1,20 @@
+{
+  "name": "ece-webapp-jovayu",
+  "version": "1.0.0",
+  "description": "-Comment vas-tu ?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aym00n-djrak/ece-webapp-jovayu.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aym00n-djrak/ece-webapp-jovayu/issues"
+  },
+  "homepage": "https://github.com/aym00n-djrak/ece-webapp-jovayu#readme"
+}
