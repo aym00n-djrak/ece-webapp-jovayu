@@ -1,5 +1,6 @@
-# README JOVANOVIC REMY YU SHIHAO
+#Projet-Technologies web SI
 
-- Comment vas-tu ?
+## Contributeurs
 
-	Très bien !
+- Rémy JOVANOVIC
+- Shihao YU 
