@@ -13,7 +13,7 @@ C'est un Projet trés intéressant d'ING 4.
 
 ## Usage
 
-- Héberger un site web
+- Express/ Nodemon
 - [Next.js](https://nextjs.org/)
 
 ## language utilisée
