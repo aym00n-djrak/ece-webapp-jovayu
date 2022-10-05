@@ -11,6 +11,9 @@ C'est un Projet trés intérréssant d'ING 4. (Ajoute aprés...)
 
 ## Usage
 
+- Héberger un site web
+- [Next.js](https://nextjs.org/)
+
 ## language utilisée
 - HTML
 - CSS
