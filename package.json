@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/aym00n-djrak/ece-webapp-jovayu#readme",
   "dependencies": {
+    "node": "^18.10.0",
     "nodemon": "^2.0.20"
   }
 }
