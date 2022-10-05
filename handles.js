@@ -1,18 +1,6 @@
-// ./handles.js
-// Necessary imports
-const http = require('http')
+
 const url = require('url')
 const qs = require('querystring')
-const content = '<!DOCTYPE html>' +
-'<html>' +
-'    <head>' +
-'        <meta charset="utf-8" />' +
-'        <title>ECE AST</title>' +
-'    </head>' + 
-'    <body>' +
-'       <p>Hello World!</p>' +
-'    </body>' +
-'</html>'
 
 
 module.exports = {
