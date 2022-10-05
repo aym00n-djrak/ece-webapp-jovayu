@@ -1,9 +1,11 @@
 # Projet-Technologies web SI
 
 ## Présentation
-C'est un Projet trés intérréssant d'ING 4. (Ajoute aprés...)
+
+C'est un Projet trés intéressant d'ING 4.
 
 ## Installation
+
 - VisualStudio
 - Node.js
 - Git
@@ -15,6 +17,7 @@ C'est un Projet trés intérréssant d'ING 4. (Ajoute aprés...)
 - [Next.js](https://nextjs.org/)
 
 ## language utilisée
+
 - HTML
 - CSS
 - JavaScript
