@@ -13,7 +13,7 @@ module.exports = {
       
         if (path === '/hello' && 'name' in params) {
           res.write('Hello ' + params['name'])
-        }else if(path === '/Helloremy'){
+        }else if(path === '/Hello remy'){
             res.write('JOVANOVIC Rémy: 21 ans, Permis B')
             res.write('I love girls!!!!')
         }
