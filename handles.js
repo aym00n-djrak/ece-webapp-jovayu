@@ -15,11 +15,10 @@ module.exports = {
           res.write('Hello ' + params['name'])
         }else if(path === '/Hello remy'){
             res.write('JOVANOVIC Rémy: 21 ans, Permis B')
-            res.write('I love girls!!!!')
         }
         else if (path === '/Hello ShiHao')
         {
-          res.write('ShiHao Yu: 23 ans, Etudiant d'ECE')
+          res.write('ShiHao Yu: 23 ans, Etudiant d ECE')
         }         
         else {
           res.write('Error 404')
