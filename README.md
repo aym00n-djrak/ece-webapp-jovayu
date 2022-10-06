@@ -6,10 +6,11 @@ C'est un Projet trés intéressant d'ING 4.
 
 ## Installation
 
-- VisualStudio
-- Node.js
-- Git
-- Linux
+Commande a suivre pour utiliser la web app:
+
+```bash
+npm run develop
+```
 
 ## Usage
 
