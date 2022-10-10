@@ -2,7 +2,7 @@
 
 ## Présentation
 
-C'est un Projet trés intéressant d'ING 4.
+C'est un Projet trés intéressant d'ING 4. Rémy love Lucie
 
 ## Installation
 
