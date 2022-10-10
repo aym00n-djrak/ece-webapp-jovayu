@@ -9,7 +9,10 @@ Ce projet étudiant a pour but de réaliser un blog en React grâce à l'aide de
 Commande a suivre pour utiliser la web app:
 
 ```bash
-npm run develop
+//Installer faker
+//puis
+
+npm start
 ```
 
 ## Usage
