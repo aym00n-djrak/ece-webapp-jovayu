@@ -1,17 +1,27 @@
 const express = require('express')
 const birds = require('./birds')
-
-const app = express()
-
 const faker = require('faker')
 const bodyParser= require('body-parser')
 
 const users = []
 
+//list users
+
+for(let i=0; i<10; i++){
+  users.push({
+      nom: faker.internet.userName,
+        email: faker.internet.email()
+  })
+}
+
+const app = express()
+
 app.use(bodyParser.urlencoded({extends: false}))
 app.use(bodyParser.json())
-
 app.use('/birds', birds)
+
+
+//GET MAIN
 
 app.get('/', function (req, res) {
   res.json({
@@ -19,29 +29,25 @@ app.get('/', function (req, res) {
   })
 })
 
+//GET
+
 app.get(`/remy`, (req,res) =>{
   res.json({
     data: [
       {
-        firstname: 'Rémy',
-        lastname: 'JOVANOVIC',
         email: 'remyj@outlook.fr'
       }
     ]
   })
 })
 
-for(let i=0; i<10; i++){
-  users.push({
-        email: faker.internet.email()
-  })
-}
-
 app.get('/users', (req,res)=>{
   res.json({
     data: users
   })
 });
+
+//GET ID
 
 app.get('/users/:id', (req,res)=>{
   const id = req.params.id -1
@@ -53,16 +59,42 @@ app.get('/users/:id', (req,res)=>{
 });
 
 
+//POST
+
 app.post('/users', (req,res) => {
   const data= req.body
 
-  console.log(data)
+  users.push(data)
 
   res.json({
-    data: undefined
+    index: users.length,
+    data: users[users.length-1]
   })
 })
 
+//PUT
 
+app.put('/users/:id', (req,res) =>{
+  const id= req.params.id -1
+  const data= req.body
+
+  users[id] = Object.assign(users[id], data)
+
+  res.json({
+    data: users[id]
+  })
+})
+
+//DELETE A REVOIR
+
+app.delete('users/:id', (req,res)=>{
+  const id= req.params.id -1
+  
+  users.splice(id,1)
+
+  console.log(users.length)
+
+  res.sendStatus(200)
+})
 
 app.listen(3000)
