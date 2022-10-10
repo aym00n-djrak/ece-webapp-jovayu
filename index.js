@@ -35,17 +35,20 @@ app.get(`/remy`, (req,res) =>{
   res.json({
     data: [
       { prénom:'Rémy',
-        nom:'Jovanovic'
+        nom:'Jovanovic',
         email: 'remyj@outlook.fr'
       }
     ]
   })
 }
+)
+
+
 app.get(`/shihao`, (req,res) =>{
   res.json({
     data: [
       { prénom:'ShiHao',
-        nom:'Yu'
+        nom:'Yu',
         email: 'shihao@outlook.fr'
       }
     ]
