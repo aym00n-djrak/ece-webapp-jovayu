@@ -8,7 +8,7 @@ Ce projet étudiant a pour but de réaliser un blog en React grâce à l'aide de
 
 Commande a suivre pour utiliser la web app:
 
-- Installer [faker] (https://fakerjs.dev/)
+- Installer [faker](https://fakerjs.dev/)
 
 ```bash
 ###Installer faker
