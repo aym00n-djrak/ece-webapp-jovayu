@@ -2,7 +2,7 @@
 
 ## Présentation
 
-C'est un Projet trés intéressant d'ING 4. Rémy love Lucie
+C'est un Projet trés intéressant d'ING 4. Rémy love Lucie; mais je ne suis pas d'accord. J'ai fait de bushido et je vais me battre avec remy pour la plus belle japonaise ---Lucie. 
 
 ## Installation
 
