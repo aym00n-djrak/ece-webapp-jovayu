@@ -102,7 +102,7 @@ app.put('/users/:id', (req,res) =>{
 
 //DELETE A REVOIR
 
-app.delete('users/:id', (req,res)=>{
+app.delete('/users/:id', (req,res)=>{
   const id= req.params.id -1
   
   users.splice(id,1)
