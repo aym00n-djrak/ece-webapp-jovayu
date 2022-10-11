@@ -2,7 +2,7 @@
 
 ## Présentation
 
-Ce projet étudiant a pour but de réaliser un blog en React grâce à l'aide de Next.js.
+L'objectif principal de ce semestre est de réaliser un blog en React, nous utiliserons des outils tels que NODE.JS pour atteindre cet objectif.En même temps, nous utiliserons une base de données, un framework Web, de nouveaux contenus de gestion d'état pour optimiser le projet.
 
 ## Installation
 
