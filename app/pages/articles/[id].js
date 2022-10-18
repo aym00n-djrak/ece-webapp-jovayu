@@ -2,9 +2,11 @@ import { useRouter } from 'next/router'
 
 function Details() {
     const router= useRouter()
-    const {pid} = router.query
+    const id = router.query.id
+
+    console.log(id)
     
-    return <h1>Détails  article {pid}</h1>
+    return (<h1>Détails  article {id}</h1>)
 }
 
 export default Details
