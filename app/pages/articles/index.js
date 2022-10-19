@@ -1,17 +1,19 @@
 import Link from 'next/link'
+import db from './data'
 
-const Articles = ({ articles }) => {
+const Articles = () => {
+    const article = db.articles.find( article => article.id)    
+    
   return (
     <div>
-      <h1>Tout les articles:</h1>
-       <li> <Link href="/articles/1">Article 1</Link></li>
-       <li> <Link href="/articles/2">Article 2</Link></li>
-       <li> <Link href="/articles/3">Article 3</Link></li>
-       <li> <Link href="/articles/4">Article 4</Link></li>
-       <li> <Link href="/articles/5">Article 5</Link></li>
-
-    </div>
-  );
+    <Link href={`/articles/${article.id}`}>
+    <div>
+      <a><h1>Article : {article.id}</h1>
+      </a>
+      </div>
+      </Link>
+      
+      </div>  );
 };
 
 export default Articles;
