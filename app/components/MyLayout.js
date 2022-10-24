@@ -1,12 +1,11 @@
 import Navbar from "./Navbar";
-import styles from '../styles/Home.module.css'
 
 function MyLayout({children}){
 return (
-<div className="container">
-<Navbar></Navbar>
+<div className="bg-zinc-900 text-zinc-50 text-center">
+<Navbar />
     {children}
-    <div className={styles.footer}> JOVAYU &copy; 2022</div>
+    <div> JOVAYU &copy; 2022</div>
 </div>
 )
 }

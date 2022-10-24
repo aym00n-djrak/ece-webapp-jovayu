@@ -1,34 +1,25 @@
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-
 
 function Navbar(){
     return(
-        <nav className={styles.navbar}>
-
-            <li className={styles.navbaritem}>
-                <Link href="/">
-                <a>Home</a>
+        <nav className='flex items-center flex-wrap bg-blue-400 p-3 ' >
+                <Link href="/" className='inline-flex items-center p-2 mr-4 space-y-4'>
+                Home
             </Link>
-            </li>
 
-            <li className={styles.navbaritem}>
-            <Link className={styles.navbaritem} href="/articles">
-                <a>Articles</a>
+            <Link  href="/articles" className='inline-flex items-center p-2 mr-4 space-y-4'>
+               Articles
             </Link>
-            </li>
 
-            <li className={styles.navbaritem}>
-            <Link className={styles.navbaritem} href="/contact">
-                <a>Contact</a>
+            <Link  href="/contact" className='inline-flex items-center p-2 mr-4 space-y-4'>
+                Contact
             </Link>
-            </li>
 
-            <li className={styles.navbaritem}>
-            <Link className={styles.navbaritem} href="/about">
-                <a>About</a>
+            <Link  href="/about" className='inline-flex items-center p-2 mr-4 space-y-4'>
+               About   
             </Link>
-            </li>
+
+            <input class="bg-gray-200 focus:bg-white ..."></input>
         </nav>
     )
 }
