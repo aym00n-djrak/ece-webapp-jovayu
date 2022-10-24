@@ -1,26 +1,20 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import picture from '../public/cyber.jpg'
+import Head from "next/head";
+import Layout from "../layout";
+import About from "../layout/About";
+import Projects from "../layout/Projects";
 
 export default function Home() {
   return (
     <div>
-     <main >
-      <h1>Bienvenue !</h1>
+      <Head>
+        <title>Rémy | IA Learner</title>
+        <meta name="description" content="I'm a student at ECE" />
+      </Head>
 
-    <Image src={picture}      
-      alt="Picture of the author"
-      />
-
-      <div>
-        
-        <nav >
-         <Link href='/enter'>
-            <button class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>Enter</button>
-          </Link>
-         </nav>
-      </div>
-    </main>
-        </div>
-  )
+      <Layout>
+        <About />
+        <Projects/>
+      </Layout>
+    </div>
+  );
 }
