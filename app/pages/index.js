@@ -11,7 +11,6 @@ export default function Home() {
         <title>Rémy | IA Learner</title>
         <meta name="description" content="I'm a student at ECE" />
       </Head>
-
       <Layout>
         <About />
         <Projects/>
