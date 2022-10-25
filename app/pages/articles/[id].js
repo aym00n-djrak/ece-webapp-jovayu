@@ -1,23 +1,40 @@
 import { useRouter } from 'next/router'
-import db from './data'
+import db from '../../lib/data'
 
 
 function Details() {
-    const router= useRouter()
-    const id = router.query.id
-    console.log(id)
-
+    const router = useRouter()
+    const { id } = router.query
     const article = db.articles.find( article => article.id === id)    
-    console.log(article)
 
     return (
-    <div>
-    <h1>Détails  article {article.id}</h1>
-    <p>Article: {article.content}</p>
-    <p>Date: {article.date}</p>
-    <p>Auteur: {article.author}</p>
-    </div>
+        <div>
+            <h1>{article.title}</h1>
+            <p>{article.content}</p>
+            <p>{article.date}</p>
+            <p>{article.author}</p>
+        </div>
     )
 }
+
+export async function getStaticPaths() {
+    const paths = db.articles.map(article => ({
+        params: { id: article.id }
+    }))
+
+    return {
+        paths,
+        fallback: false
+    }
+}
+
+export async function getStaticProps() {
+    return {
+        props: {
+            articles: db.articles
+        }
+    }
+}
+
 
 export default Details

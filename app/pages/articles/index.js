@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import db from './data'
+import db from '../../lib/data'
 
 const Articles = () => {
     const article = db.articles.find( article => article.id)    
@@ -19,5 +19,13 @@ const Articles = () => {
         </div>
       )
 };
+
+export async function getStaticProps() {
+    return {
+        props: {
+            articles: db.articles
+        }
+    }
+}
 
 export default Articles;
