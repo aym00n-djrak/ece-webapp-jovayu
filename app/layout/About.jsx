@@ -9,10 +9,10 @@ const About = () => {
       <div className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div className="z-10">
           <h1 className="py-4 text-gray-700 dark:text-white">
-            Hi, I&#39;m{" "}
-            <span className="animate-waving-hand text-green-500">Rémy.</span>
+            Hi, We are 
+            <span className="animate-waving-hand text-green-500"> Rémy & Shihao.</span>
           </h1>
-          <h1 className="py-2 text-gray-700 dark:text-white">Student at ECE</h1>
+          <h1 className="py-2 text-gray-700 dark:text-white">Students at ECE</h1>
 
           <div className="border-4"></div>
 

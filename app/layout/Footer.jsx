@@ -1,5 +1,5 @@
 const Footer = () => {
-  return <div>
+  return <div className="text-center">
     JOVAYU &copy; 2022</div>;
 };
 
