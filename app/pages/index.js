@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "../layout";
 import About from "../layout/About";
 import Projects from "../layout/Projects";
-import Navbar from "../layout/Navbar";
+import Form from "../components/Form";
 
 export default function Home() {
   return (
