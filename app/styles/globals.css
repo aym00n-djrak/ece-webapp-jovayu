@@ -12,7 +12,9 @@ html {
 @layer base {
   body {
     @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+    @apply dark:bg-[#1f2937] dark:text-[#ecf0f3];
   }
+
   h1,
   h2,
   h3,
@@ -28,8 +30,7 @@ html {
     user-select: none;
   }
   p,
-  a,
-  img {
+  a, img {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -44,9 +45,5 @@ html {
 
   h2 {
     @apply text-3xl sm:text-4xl;
-  }
-
-  .logo {
-    @apply bg-[#06202A] text-gray-300;
   }
 }

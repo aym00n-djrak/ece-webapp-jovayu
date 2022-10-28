@@ -1,13 +1,16 @@
 import "../styles/globals.css";
 import Navbar from "../layout/Navbar";
 import Footer from "../layout/Footer";
+import { ThemeProvider } from "next-themes";
 
 function MyApp({ Component, pageProps }) {
   return (
     <div>
-      <Navbar className="bg-violet-500	 text-center items-center p-2"/>
+      <ThemeProvider>
+      <Navbar/>
       <Component {...pageProps} />
       <Footer/>
+      </ThemeProvider>
   </div>
   );  
 }

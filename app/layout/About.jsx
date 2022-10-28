@@ -18,10 +18,10 @@ const About = () => {
 
           <a
             href="#projects"
-            className="mt-12 flex flex-col gap-2 text-green-500 max-w-[300px] m-auto justify-center"
+            className="mt-12 flex flex-col gap-2 text-green-500 max-w-[300px] m-auto justify-center items-center"
           >
             <span className="animate-waving-arrow">My code !</span>
-            <HiCode className="items-center"/>
+            <HiCode/>
           </a>
         </div>
       </div>
