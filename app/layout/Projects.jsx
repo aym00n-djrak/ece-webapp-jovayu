@@ -14,6 +14,7 @@ const Projects = () => {
       <h2>My projects :</h2>
       <Carousel>
                   <div>
+                    <Image src={Cyber}/>
                       <p className="legend">Image 1</p>
   
                   </div>
