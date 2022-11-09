@@ -7,12 +7,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <div>
       <ThemeProvider>
-      <Navbar/>
-      <Component {...pageProps} />
-      <Footer/>
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
-  </div>
-  );  
+    </div>
+  );
 }
 
 export default MyApp;

@@ -11,7 +11,7 @@ function About(){
         </main>
         </div>
 
-    )
+               )
 }
 
 export default About;
