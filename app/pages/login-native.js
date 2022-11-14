@@ -1,44 +1,33 @@
-import { useContext } from "react";
-import { useState } from "react";
-import Context from "./Context";
-import MyForm from "./form";
-import FormData from "form-data";
-
-const LoggedOut = () => {
-  const { login } = useContext(Context);
-  var formdata = new FormData();
-  var myForm = document.getElementById("MyForm");
-  formdata= new FormData(myForm);
-
+const MyForm = function () {
+  const onSubmit = function (e) {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    output.textContent =
+      "Login: " + data.get("login") + " Password: " + data.get("password");
+  };
   return (
-    <div className="flex flex-col text-center justify-center m-4">
-      <MyForm/>
-      formdata.get("username");
-      formdata.get("password");
-    </div>
-  );
-};
+    <form onSubmit={onSubmit}>
+      <h2>My form</h2>
+      <div className="form-group row mb-3 mt-3 text-center justify-center m-4 ">
+        <div>
+          <label htmlFor="name">Login:</label>
+          <br />
+          <input type="text" name="login" className="border-2 border-gray-300 bg-blue-500 h-10 px-5 pr-16 rounded-lg  focus:outline-none " />
+        </div>
+        <di>
+          <label htmlFor="password">Password:</label>
+          <br />
+          <input type="password" name="password" className="border-2 border-gray-300 bg-blue-500 h-10 px-5 pr-16 rounded-lg  focus:outline-none " />
+        </di>
+        <br />
 
-const LoggedIn = () => {
-  const { user, logout } = useContext(Context);
-  return (
-    <div className="flex flex-col text-center justify-center m-4">
-      <h1 className="text-3xl font-bold">Welcome {user.username}</h1>
-      <br />
-      <p>Ton mot de passe est {user.password}</p>
-      <div>
-        <button
-          onClick={logout}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          Logout
-        </button>
+        <div>
+          <button className="border-2 border-gray-300 bg-blue-500 h-10 px-5 pr-16 rounded-lg  focus:outline-none ">Submit</button>
+        </div>
+        <output id="output"></output>
       </div>
-    </div>
+    </form>
   );
 };
 
-export default () => {
-  const { user } = useContext(Context);
-  return <div>{user ? <LoggedIn /> : <LoggedOut />}</div>;
-};
+export default MyForm;
