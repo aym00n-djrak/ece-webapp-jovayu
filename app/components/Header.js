@@ -35,7 +35,7 @@ const Header = () => {
           </button>
 
           <div className="flex flex-col text-center justify-center m-4">
-            <h1 className="text-3xl font-bold">{user?.username}</h1>
+          <h1 className="text-3xl font-bold">{user?.username}</h1>
           </div>
         </div>
       </nav>

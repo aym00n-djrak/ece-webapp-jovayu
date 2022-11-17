@@ -4,24 +4,26 @@ import Layout from "../layout";
 import { UserContext } from "../components/UserContext";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider } from "@supabase/auth-helpers-react";
-import {useState} from "react";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
   const [supabase] = useState(() => createBrowserSupabaseClient());
 
   return (
-    <div>
-      <ThemeProvider>
-        <SessionContextProvider supabaseClinet={supabase} initialSession={pageProps.initialSession}>
-        <UserContext>
-          <Layout>
+    <ThemeProvider>
+      <UserContext>
+        <Layout>
+          <SessionContextProvider
+            supabaseClient={supabase}
+            initialSession={pageProps.initialSession}
+          >
             <Component {...pageProps} />
-          </Layout>
-        </UserContext>
-        </SessionContextProvider>
-      </ThemeProvider>
-    </div>
+          </SessionContextProvider>
+        </Layout>
+      </UserContext>
+    </ThemeProvider>
   );
 }
 
 export default MyApp;
+
