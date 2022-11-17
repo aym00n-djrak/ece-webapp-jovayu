@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@supabase/auth-ui-react": "^0.2.6",
     "form-data": "^4.0.0"
   }
 }

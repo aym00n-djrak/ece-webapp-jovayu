@@ -7,5 +7,4 @@ export default function handler(req, res) {
       username: 'Rémy',
       email: 'remyj@outlook.fr'
     })
-
   }
