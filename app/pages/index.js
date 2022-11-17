@@ -24,7 +24,7 @@ const Home = () => {
         />
       ) : (
         <p>
-          <Account />
+          <Account session={session} />
           <About />
           <Projects />
         </p>
