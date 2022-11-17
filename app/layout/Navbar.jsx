@@ -12,7 +12,7 @@ function Navbar() {
             <Image src={Nav} alt="nav" width={50} height={50}/>
           </a>
         </Link>
-        <Link href="/articles">Articles </Link>
+        <Link href="/articles" className="v">Articles </Link>
 
         <Link href="/contact">Contact </Link>
 

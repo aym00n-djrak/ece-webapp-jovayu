@@ -28,7 +28,7 @@ const Form = () => {
             {errors.lastName && <p>{errors.lastName.message}</p>}
             <input type="email" placeholder="Email" {...register("email")} />
             {errors.email && <p>{errors.email.message}</p>}
-            <input type="submit" />
+            <input type="submit"  />
 
         </form>
     );
