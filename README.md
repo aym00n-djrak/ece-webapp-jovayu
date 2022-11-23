@@ -1,32 +1,69 @@
-# Getting Started
+# Portfolio JOVAYU
 
-First, go to the app folder and run the development server:
+## Introduction
+
+Voici notre portfolio réalisé avec NextJS !
+
+## Instructions pour installation
+
+1. [Installer Git](https://git-scm.com/downloads)
+
+2. [Installer NodeJS](https://nodejs.org/en/download/)
+
+3. [Installer Docker](https://docs.docker.com/engine/install/)
+
+4. Cloner ce dépôt: [Portfolio JovaYu](https://github.com/aym00n-djrak/ece-webapp-jovayu)
+
+5. Se deplacer dans le dossier "app"
+
+```bash
+cd app
+```
+
+5. Installer les dépendances nodes requises: 
+
+```bash
+npm i
+```
+
+## Instructions pour lancer l'application
+
+
+1. Lancer l'application en mode développement:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A partir de celle-ci vous pouvez tester votre site de développement
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Ensuite démarrer la base de données Supabase:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Dans votre depôt dirigée vous vers le dossier supabase et démarrer docker:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+cd supabase
+sudo service docker start
+sudo docker-compose start
+```
 
-## Learn More
+Votre base de données supabase locale sera ainsi mise en route
 
-To learn more about Next.js, take a look at the following resources:
+2. Build l'application:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Démarrer la version finale:
 
-## Deploy on Vercel
+```bash
+npm run start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Auteurs
+
+- Rémy JOVANOVIC
+- Shihao YU
