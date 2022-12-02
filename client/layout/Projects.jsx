@@ -7,7 +7,7 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { DiCodeigniter } from "react-icons/di";
 import Form from "../components/Form";
-import Profile from "../pages/admin/profile";
+import Profile from "../pages/contacts/profile";
 
 const Projects = () => {
   return (

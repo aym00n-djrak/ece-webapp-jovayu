@@ -1,5 +1,5 @@
 const userProfile= {
-  name: 'John Doe',
+  name: 'Rémy JOVANOVIC',
   email: "johndoe@gmail.com"
 }
 

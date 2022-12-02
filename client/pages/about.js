@@ -1,6 +1,6 @@
 import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Account from "./admin/account";
+import Contacts from "./contacts/contacts";
 
 function About(){
     const session = useSession();
@@ -20,7 +20,7 @@ function About(){
         />
       ) : (
         <p>
-          <Account session={session} />
+          <Contacts session={session} />
         </p>
       )}
 
