@@ -30,10 +30,10 @@ function Navbar() {
             <Avatar />
             <img
               src="https://mdbcdn.b-cdn.net/img/new/avatars/8.webp"
-              class="rounded-full w-16 mb-4 mx-auto"
+              className="rounded-full w-16 mb-4 mx-auto"
               alt="Avatar"
             />
-            <h5 class="text-xl font-medium leading-tight mb-2">
+            <h5 className="text-xl font-medium leading-tight mb-2">
               {user ? user.name : "Not logged in"}
             </h5>
           </div>
