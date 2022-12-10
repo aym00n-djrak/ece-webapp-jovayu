@@ -16,7 +16,27 @@ export default function Contacts({ id }) {
         .single();
       setContact(data);
     })();
-  }, [id, supabase]);
+  }
+, [id, supabase]);
+
+//fonction delete
+
+const deleteData = async () => {
+  const { data, error } = await supabase
+
+    .from('contacts')
+    .delete()
+    .eq('id', id)
+    .single()
+    .then(() => {
+      window.location.href = "/admin/contacts";
+    })
+    .catch((error) => {
+      console.log('error', error)
+    })
+}
+
+
   return (
     <>
     <Layout>
@@ -46,6 +66,8 @@ export default function Contacts({ id }) {
           </div>
         </div>
       )}
+
+      <button className="btn btn-primary"  onClick={deleteData}>Delete</button>
       </Layout>
     </>
   );
