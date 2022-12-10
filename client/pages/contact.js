@@ -1,17 +1,21 @@
-function Contact(){
-    return(
+import Layout from "../layout";
 
-        <div>
+function Contact() {
+  return (
+    <div>
+      <Layout>
         <main>
-            <h1>Nos contacts :</h1>
-            <p>Rémy: <a href="mailto:remyj@outlook.fr">remyj@outlook.fr</a>
-</p>
-            <p>Shihao: <a href="mailto:shihao@outlook.fr">shihao@outlook.fr</a></p>
-
+          <h1>Nos contacts :</h1>
+          <p>
+            Rémy: <a href="mailto:remyj@outlook.fr">remyj@outlook.fr</a>
+          </p>
+          <p>
+            Shihao: <a href="mailto:shihao@outlook.fr">shihao@outlook.fr</a>
+          </p>
         </main>
-        </div>
-
-    )
+      </Layout>
+    </div>
+  );
 }
 
 export default Contact;

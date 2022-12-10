@@ -24,7 +24,7 @@ function Navbar() {
 
         <Link href="/contact">Contact </Link>
 
-        <Link href="/about">About </Link>
+        <Link href="/Contacts">Contacts </Link>
         <div>
           <div>
             <Avatar />

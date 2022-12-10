@@ -4,7 +4,7 @@ import Head from "next/head";
 import Layout from "../layout";
 import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession } from "@supabase/auth-helpers-react";
-import Account from "./contacts/account";
+import Account from "./admin/account";
 
 export default function Login() {
   const router = useRouter();
