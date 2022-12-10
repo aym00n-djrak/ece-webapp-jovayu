@@ -8,7 +8,7 @@ export default function Account({ session }) {
   const [username, setUsername] = useState(null)
   const [website, setWebsite] = useState(null)
   const [avatar_url, setAvatarUrl] = useState(null)
-
+/*
   useEffect(() => {
     getProfile()
   }, [session])
@@ -39,6 +39,7 @@ export default function Account({ session }) {
       setLoading(false)
     }
   }
+*/
 
   async function updateProfile({ username, website, avatar_url }) {
     try {

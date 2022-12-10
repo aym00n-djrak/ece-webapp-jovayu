@@ -5,6 +5,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       contact,
+      key : contact.id
     },
   };
 }

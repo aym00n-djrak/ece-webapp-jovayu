@@ -23,6 +23,7 @@
     "react-icons": "^4.6.0",
     "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.31.1",
+    "supabase": "^1.22.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {

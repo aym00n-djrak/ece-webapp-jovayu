@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import Layout from "../../layout";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+//import { supabase } from "../../utils/supabase";
 
 export default function Contacts({ id }) {
   const [contact, setContact] = useState(null);

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import Layout from "../../layout";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+//import { supabase } from "../utils/supabase";
 
 export default function Contacts() {
   const [contacts, setContacts] = useState([]);
@@ -29,6 +29,12 @@ export default function Contacts() {
             <table className="min-w-full divide-y divide-slate-300">
               <thead className="bg-slate-50">
                 <tr>
+                <th
+                    scope="col"
+                    className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6"
+                  >
+                    ID
+                  </th>
                   <th
                     scope="col"
                     className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6"
@@ -56,6 +62,9 @@ export default function Contacts() {
               <tbody className="divide-y divide-slate-200 bg-white">
                 {contacts.map((contact) => (
                   <tr key={contact.email}>
+                    <td className="whitespace-nowrap px-3 py-4 text-sm text-slate-500">
+                      {contact.id}
+                    </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-slate-500">
                       {contact.firstname}
                     </td>
