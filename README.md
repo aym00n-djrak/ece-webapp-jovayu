@@ -4,6 +4,12 @@
 
 Voici notre portfolio réalisé avec NextJS !
 
+Ce travail a été effectué par notre équipe de deux personnes (Rémy JOVANOVIC et ShiHao YU) pendant près d'un semestre, et il s'appuie sur les travaux précédents effectués au Lab. Notre projet final est une application de blogging Web, chaque utilisateur qui se connecte doit entrer son compte et son mot de passe, et tous les utilisateurs qui utilisent des programmes externes pour se connecter ont besoin d'une authentification tierce. Tous les utilisateurs ou visiteurs connectés peuvent choisir de parcourir les articles publiés par d'autres auteurs et laisser leurs commentaires.
+Seuls les utilisateurs connectés au blog peuvent publier leurs propres articles, les visiteurs ne sont pas autorisés. En outre, les auteurs d'articles peuvent choisir d'éditer leurs articles, tels que modifier ou supprimer. De plus, les auteurs sont également autorisés à modifier ou supprimer les commentaires qu'ils n'aiment pas.Le forum dispose d'une base de données dédiée pour stocker tous les articles et commentaires.
+Si les touristes souhaitent publier des articles, ils doivent accéder à l'interface d'inscription pour s'inscrire et renseigner les informations personnelles de l'utilisateur, dont certaines seront conservées sur l'interface utilisateur suivante.Dans l'interface utilisateur, l'utilisateur peut modifier ses paramètres personnels email, nom, langue..., l'utilisateur peut choisir d'afficher ou non ces attributs.De plus, les utilisateurs sont autorisés à choisir leur avatar, la couleur de l'interface utilisateur, la taille du champ de recherche, etc.Dans notre projet, nous ferons de notre mieux pour offrir aux utilisateurs la meilleure expérience.
+
+Dans les sections suivantes, nous détaillerons comment installer et exécuter notre programme.
+
 ## Instructions pour installation
 
 1. [Installer Git](https://git-scm.com/downloads)
@@ -27,7 +33,6 @@ npm i
 ```
 
 ## Instructions pour lancer l'application
-
 
 1. Lancer l'application en mode développement:
 
@@ -65,6 +70,6 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
 ## Auteurs
 
-- Rémy JOVANOVIC
-- Shihao YU
+- Rémy JOVANOVIC E-mail:remy.jovanovic@edu.ece.fr
+- Shihao YU E-mail:shihao.yu@edu.ece.fr
 
