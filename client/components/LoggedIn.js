@@ -1,19 +1,33 @@
-import { useContext } from "react";
-import  UserContext  from './UserContext';
-import { AiFillTrophy } from "react-icons/ai";
-import { useRouter } from "next/router";
+import { useContext } from 'react'
+import { useRouter } from 'next/router'
+import OutlineUserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon.js'
+import UserContext from './UserContext'
 
-export default function LoggedIn() {
-    const { user, logout } = useContext(UserContext)
-    const onClickLogout = async (e) => {
-        logout()
-
-        
-    }
-    return (
-        <button className=" bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded" onClick={onClickLogout}>
-        Logout{user.username}
-        <AiFillTrophy className="inline-block ml-2"/>
-        </button>
-    )
+export default function LoggedIn(){
+  const router = useRouter()
+  const {user, logout} = useContext(UserContext)
+  function onClick() {
+    if (user)
+      router.push('/profile')
+    else
+      router.push('/login')
+  }
+  return (
+    <button
+      className="flex gap-2 [&_svg]:h-6 [&_svg]:w-6"
+      onClick={onClick}
+    >
+      {user ?
+        <>
+          <OutlineUserCircleIcon />
+          {user.user_metadata.preferred_username}
+        </>
+        :
+        <>
+          <OutlineUserCircleIcon />
+          Login
+        </>
+      }
+    </button>
+  )
 }
