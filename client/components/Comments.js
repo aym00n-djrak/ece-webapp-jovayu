@@ -3,26 +3,39 @@ import Head from "next/head";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import Layout from "../../layout";
+import Layout from "../layout";
 import { useRouter } from 'next/router'
+import { useContext } from "react";
+import UserContext from "./UserContext";
 
-export default function Contacts() {
+export default function MyComments() {
   const router = useRouter()
+  const { user } = useContext(UserContext)
+
   const [contacts, setContacts] = useState([]);
   const supabase = useSupabaseClient();
+  
   useEffect(() => {
-    (async () => {
-      let { data, error, status } = await supabase
-        .from("contacts")
-        .select(`id, firstname, lastname, email, user_id`);
-      setContacts(data);
-    })();
-  }, [supabase]);
+    if (!(user)) {
+      router.push('/login')
+    }
+  }, [user, router])
 
-  const createComment = async () => {
-    router.push('/commentaires')
-  }
-    
+  useEffect(() => {
+    const fetchContacts = async () => {
+      const { data, error } = await supabase
+        .from("contacts")
+        .select("*")
+        .eq("user_id", user.id) 
+      if (error) {
+        console.log(error);
+      } else {
+        setContacts(data);
+      }
+    };
+    fetchContacts();
+  }, [supabase, user]);
+
   return (
     <Layout>
       <Head>
@@ -90,10 +103,6 @@ export default function Contacts() {
                 ))}
               </tbody>
             </table>
-
-            <button className="w-full mt-4" onClick={createComment}>
-              Ecrire un commentaire.
-            </button>
 
           </div>
         </div>

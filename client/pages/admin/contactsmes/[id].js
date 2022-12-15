@@ -12,6 +12,7 @@ export default function Contacts({ id }) {
   const { user } = useContext(UserContext);
   const [contact, setContact] = useState(null);
   const supabase = useSupabaseClient();
+  
   useEffect(() => {
     (async () => {
       let { data, error, status } = await supabase

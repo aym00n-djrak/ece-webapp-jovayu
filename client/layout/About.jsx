@@ -5,10 +5,11 @@ import Trident from "../public/trident.png";
 import { useContext } from "react";
 import UserContext from "../components/UserContext";
 import { useRouter } from 'next/router'
+
 const About = () => {
-  const {user} = useContext(UserContext)
   const router = useRouter()
-  
+  const {user} = useContext(UserContext)
+
   return (
     <div className="flex w-full h-screen text-center">
       <div className="w-full h-full mx-auto p-2 flex justify-center">

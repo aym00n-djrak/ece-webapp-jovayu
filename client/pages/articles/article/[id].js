@@ -6,12 +6,17 @@ import Layout from "../../../layout";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import UserContext from "../../../components/UserContext";
+import { CpuChipIcon } from "@heroicons/react/20/solid";
+import { DiWindows } from "react-icons/di";
+import Link from "next/link";
 
 export default function Articles({ id }) {
   const router = useRouter();
   const { user } = useContext(UserContext);
   const [articles, setArticle] = useState(null);
+  const [comments, setComments] = useState([]);
   const supabase = useSupabaseClient();
+
   useEffect(() => {
     (async () => {
       let { data, error, status } = await supabase
@@ -20,6 +25,16 @@ export default function Articles({ id }) {
         .eq("id", id)
         .single();
       setArticle(data);
+    })();
+  }, [id, supabase]);
+
+  useEffect(() => {
+    (async () => {
+      let { data, error, status } = await supabase
+        .from("contacts")
+        .select(`id, firstname, lastname, email, message, user_id`)
+        .eq("article_id", id);
+      setComments(data);
     })();
   }, [id, supabase]);
 
@@ -43,6 +58,10 @@ export default function Articles({ id }) {
   //afficher le formulaire de modification
   const updateData = async () => {
     router.push(`/articles/update/${id}`);
+  };
+
+  const commentArticle = async () => {
+    router.push(`/articles/comment/${id}`);
   };
 
   return (
@@ -86,6 +105,48 @@ export default function Articles({ id }) {
           </>
         )}
 
+        <button className="btn btn-primary" onClick={commentArticle}>
+          Commenter
+        </button>
+
+        <h2 className="wt-title p-4">Commentaires :</h2>
+
+        <div className="not-prose -my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+            <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+              <table className="min-w-full divide-y divide-slate-300">
+                <thead className="bg-slate-50">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6"
+                    >
+                      Firstname
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
+                    >
+                        Message
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200 bg-white">
+                  {comments.map((comment) => (
+                    <tr key={comment.email}>
+                      <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
+                        {comment.firstname}
+                      </td>
+                      <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
+                        {comment.message}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </Layout>
     </>
   );
