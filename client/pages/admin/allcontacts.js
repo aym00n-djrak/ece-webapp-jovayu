@@ -78,7 +78,7 @@ export default function Contacts() {
                         className={
                           "w-5 h-5 block bg-zinc-700 hover:bg-blue-500 hover:text-zinc-900 rounded-full"
                         }
-                        href={`/admin/contacts/${contact.id}`}
+                        href={`/admin/contactsmes/${contact.id}`}
                       >
                         <ChevronRightIcon
                           className="h-5 w-5 "
