@@ -33,12 +33,12 @@ export default function Contacts({ id }) {
       })
       .eq("id", id)
       if (error) {
-      setMessage("Désolé, nous avons rencontre une erreur.");
+      setMessage("Desole, nous avons rencontre une erreur.");
     } else {
       setMessage(
         <div>
           <h2 className="text-center mt-3">Confirmation</h2>
-          <p>Merci d'avoir modifie votre article.</p>
+          <p>Merci d avoir modifie votre article.</p>
         </div>
       );
       router.push("/sheets");

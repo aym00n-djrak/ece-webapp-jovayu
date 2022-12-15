@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import Head from "next/head";
-import Layout from "../layout";
-import UserContext from "../components/UserContext";
+import Layout from "../../layout";
+import UserContext from "../../components/UserContext";
 import { useContext } from "react";
 import { useRouter } from 'next/router'
 
@@ -23,7 +23,7 @@ export default function CreaArticle() {
       setMessage(
         <div>
           <h2 className="text-center mt-3">Confirmation</h2>
-          <p>Merci d'avoir poste un commentaire, nous vous recontacterons le plus vite possible</p>
+          <p>Merci d avoir poste un commentaire, nous vous recontacterons le plus vite possible</p>
         </div>
       );
       router.push("/sheets");
