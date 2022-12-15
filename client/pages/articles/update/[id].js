@@ -5,7 +5,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import Layout from "../../../layout";
 import { useRouter } from "next/router";
 
-export default function Contacts({ id }) {
+export default function ArticlesUpdate({ id }) {
   const router = useRouter();
   const [message, setMessage] = useState(null);
   const [articles, setArticle] = useState(null);
@@ -32,6 +32,9 @@ export default function Contacts({ id }) {
         auteur: data.get("auteur"),
       })
       .eq("id", id)
+      .then(() => {
+        window.location.href = "/sheets";
+      })
       if (error) {
       setMessage("Desole, nous avons rencontre une erreur.");
     } else {
@@ -41,7 +44,6 @@ export default function Contacts({ id }) {
           <p>Merci d avoir modifie votre article.</p>
         </div>
       );
-      router.push("/sheets");
     }
   };
 

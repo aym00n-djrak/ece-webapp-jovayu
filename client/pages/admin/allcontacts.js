@@ -14,7 +14,7 @@ export default function Contacts() {
     (async () => {
       let { data, error, status } = await supabase
         .from("contacts")
-        .select(`id, firstname, lastname, email`);
+        .select(`id, firstname, lastname, email, user_id`);
       setContacts(data);
     })();
   }, [supabase]);

@@ -16,7 +16,15 @@ export default function CreaArticle() {
     const data = new FormData(e.target);
     const { error } = await supabase
       .from("articles")
-      .insert(Object.fromEntries(data), { returning: "minimal" });
+      .insert([
+        {
+          titre: data.get("titre"),
+          contenu: data.get("contenu"),
+          auteur: data.get("auteur"),
+          user_id: user.id,
+        },
+      ]);
+
     if (error) {
       setMessage("Désolé, nous avons rencontre une erreur.");
     } else {

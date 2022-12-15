@@ -21,7 +21,7 @@ export default function LoggedIn(){
       {user ?
         <>
           <Avatar />
-          {user.user_metadata.name}
+          {user.user_metadata.preferred_username}
         </>
         :
         <>

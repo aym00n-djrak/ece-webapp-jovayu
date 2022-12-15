@@ -1,6 +1,6 @@
 import { Auth, ThemeSupa } from "@supabase/auth-ui-react";
 import { useSession, useSupabaseClient } from "@supabase/auth-helpers-react";
-import Contacts from "./admin/contacts";
+import Contacts from "./admin/allcontacts";
 
 function About() {
   const session = useSession();

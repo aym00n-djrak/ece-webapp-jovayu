@@ -4,16 +4,19 @@ import Head from "next/head";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import Layout from "../../../layout";
 import { useRouter } from "next/router";
+import { useContext } from "react";
+import UserContext from "../../../components/UserContext";
 
-export default function Contacts({ id }) {
+export default function Articles({ id }) {
   const router = useRouter();
+  const { user } = useContext(UserContext);
   const [articles, setArticle] = useState(null);
   const supabase = useSupabaseClient();
   useEffect(() => {
     (async () => {
       let { data, error, status } = await supabase
         .from("articles")
-        .select(`titre, contenu, auteur`)
+        .select(`titre, contenu, auteur, user_id`)
         .eq("id", id)
         .single();
       setArticle(data);
@@ -37,10 +40,10 @@ export default function Contacts({ id }) {
       });
   };
 
- //afficher le formulaire de modification
-    const updateData = async () => {
-        router.push(`/articles/update/${id}`);
-    };
+  //afficher le formulaire de modification
+  const updateData = async () => {
+    router.push(`/articles/update/${id}`);
+  };
 
   return (
     <>
@@ -71,12 +74,18 @@ export default function Contacts({ id }) {
           </div>
         )}
 
-        <button className="btn btn-primary" onClick={deleteData}>
-          Delete
-        </button>
-        <button className="btn btn-primary" onClick={updateData}>
-          Update
-        </button>
+        {articles && articles.user_id === user.id && (
+          <>
+            <button className="btn btn-primary" onClick={deleteData}>
+              Delete
+            </button>
+
+            <button className="btn btn-primary" onClick={updateData}>
+              Update
+            </button>
+          </>
+        )}
+
       </Layout>
     </>
   );
