@@ -19,7 +19,7 @@ export default function Articles() {
     })();
   }, [supabase]);
   const createArticle = async () => {
-    router.push('/CreaArticle')
+    router.push('/articles/CreaArticle')
   }
   return (
     <Layout>
@@ -46,6 +46,12 @@ export default function Articles() {
                     className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
                   >
                     Auteur
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
+                  >
+                    Choix
                   </th>
                 </tr>
               </thead>
