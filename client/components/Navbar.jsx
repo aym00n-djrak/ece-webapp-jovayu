@@ -19,11 +19,9 @@ function Navbar() {
         </Link>
         <div></div>
 
-        <Link href="/articles">Articles</Link>
+        <Link href="/sheets">Mes Articles</Link>
 
-        <Link href="/Commentaires">Commentaires </Link>
-
-        <Link href="/Contacts">Contacts </Link>
+        <Link href="/contacts">Commentaires</Link>
         <div>
           <div>
             <h5 className="text-xl font-medium leading-tight mb-2">
