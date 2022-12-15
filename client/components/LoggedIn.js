@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { useRouter } from 'next/router'
 import OutlineUserCircleIcon from '@heroicons/react/24/outline/UserCircleIcon.js'
 import UserContext from './UserContext'
+import Avatar from './Avatar'
 
 export default function LoggedIn(){
   const router = useRouter()
@@ -19,8 +20,8 @@ export default function LoggedIn(){
     >
       {user ?
         <>
-          <OutlineUserCircleIcon />
-          {user.user_metadata.preferred_username}
+          <Avatar />
+          {user.user_metadata.name}
         </>
         :
         <>

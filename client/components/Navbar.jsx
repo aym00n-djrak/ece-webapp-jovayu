@@ -6,7 +6,6 @@ import { useContext } from "react";
 import UserContext from "../components/UserContext";
 import Avatar from "../components/Avatar";
 import LoggedIn from "./LoggedIn";
-import Brad from "../public/brad.webp";
 
 function Navbar() {
   const { user } = useContext(UserContext);
@@ -22,19 +21,11 @@ function Navbar() {
 
         <Link href="/articles">Articles</Link>
 
-        <Link href="/contact">Contact </Link>
+        <Link href="/Commentaires">Commentaires </Link>
 
         <Link href="/Contacts">Contacts </Link>
         <div>
           <div>
-            <Avatar />
-            <Image
-              src={Brad}
-              className="rounded-full w-16 mb-4 mx-auto"
-              alt="Avatar"
-              width={100}
-              height={100}
-            />
             <h5 className="text-xl font-medium leading-tight mb-2">
               {user ? user.name : "Not logged in"}
             </h5>

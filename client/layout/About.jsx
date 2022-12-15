@@ -4,9 +4,11 @@ import { HiCode } from "react-icons/hi";
 import Trident from "../public/trident.png";
 import { useContext } from "react";
 import UserContext from "../components/UserContext";
-
+import { useRouter } from 'next/router'
 const About = () => {
-  const { user } = useContext(UserContext);
+  const {user} = useContext(UserContext)
+  const router = useRouter()
+  
   return (
     <div className="flex w-full h-screen text-center">
       <div className="w-full h-full mx-auto p-2 flex justify-center">
@@ -15,7 +17,6 @@ const About = () => {
             Hi, I'm
             <span className="animate-waving-hand text-green-500">
               {" "}
-              {user?.name}
             </span>
           </h1>
           <h1 className="py-2 text-gray-700 dark:text-white">

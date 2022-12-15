@@ -7,9 +7,9 @@ import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { DiCodeigniter } from "react-icons/di";
 import Form from "../components/Form";
-import Profile from "../pages/profile";
 
 const Projects = () => {
+
   return (
     <>
       <div id="student" className="text-center m-4 p-4">
