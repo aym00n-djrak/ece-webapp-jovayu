@@ -6,7 +6,6 @@ import Layout from "../../../layout";
 import UserContext from "../../../components/UserContext";
 import { useContext } from "react";
 import { useRouter } from 'next/router'
-import { CpuChipIcon } from "@heroicons/react/20/solid";
 
 export default function Contacts({ id }) {
   const router = useRouter()
