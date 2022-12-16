@@ -1,0 +1,45 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.0.13",
+    "@heroicons/vue": "^2.0.13",
+    "@hookform/resolvers": "^2.9.10",
+    "@iconify/icons-heroicons-solid": "^1.2.6",
+    "@react-icons/all-files": "^4.1.0",
+    "@supabase/auth-helpers-nextjs": "^0.5.2",
+    "@supabase/auth-helpers-react": "^0.3.1",
+    "@supabase/auth-ui-react": "^0.2.6",
+    "@supabase/supabase-js": "^2.1.0",
+    "heroicons-react": "^1.4.1",
+    "markdown-it": "^13.0.1",
+    "md5": "^2.3.0",
+    "next": "12.3.1",
+    "next-themes": "^0.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.38.0",
+    "react-icons": "^4.6.0",
+    "react-responsive-carousel": "^3.2.23",
+    "sharp": "^0.31.1",
+    "supabase": "^1.22.1",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.7",
+    "autoprefixer": "^10.4.12",
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1",
+    "postcss": "^8.4.18",
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-font-inter": "^3.0.1"
+  }
+}
