@@ -22,7 +22,7 @@ const Header = () => {
           >
             <span className="animate-bounce">A mon propos !</span>
             <HiCode />
-            <Image src={Trident}></Image>
+            <Image src={Trident} alt="Trident" width={100} height={100} />
           </a>
         </div>
       </div>
