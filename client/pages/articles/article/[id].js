@@ -135,11 +135,12 @@ export default function Articles({ id }) {
                   {comments.map((comment) => (
                     <tr key={comment.email}>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
-                        {comment.firstname}
+                        <pre>{comment.firstname}</pre>
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
-                        {comment.message}
+                        <pre>{comment.message}</pre>
                       </td>
+                      
                     </tr>
                   ))}
                 </tbody>

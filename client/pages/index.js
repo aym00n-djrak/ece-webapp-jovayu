@@ -4,6 +4,7 @@ import Projects from "../layout/Projects";
 import Layout from "../layout";
 import { useContext } from "react";
 import UserContext from "../components/UserContext";
+import Comments from "../components/Comments";
 
 const Home = () => {
   const { user } = useContext(UserContext);

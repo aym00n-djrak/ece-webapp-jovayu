@@ -6,7 +6,6 @@ import Cyber from "../public/cyber.jpg";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { DiCodeigniter } from "react-icons/di";
-import Form from "../components/Form";
 
 const Projects = () => {
 
@@ -16,6 +15,7 @@ const Projects = () => {
         <h2> Student :</h2>
 
         <div className="flex justify-center m-2">
+          
           <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-4">
             <img
               className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
@@ -32,38 +32,7 @@ const Projects = () => {
               <p className="text-gray-600 text-xs">Last updated 3 mins ago</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-4 ">
-            <img
-              className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
-              src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
-              alt=""
-            />
-            <div className="p-6 flex flex-col justify-start">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">Card title</h5>
-              <p className="text-gray-700 text-base mb-4">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p className="text-gray-600 text-xs">Last updated 3 mins ago</p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
-            <img
-              className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
-              src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
-              alt=""
-            />
-            <div className="p-6 flex flex-col justify-start">
-              <h5 className="text-gray-900 text-xl font-medium mb-2">Card title</h5>
-              <p className="text-gray-700 text-base mb-4">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <p className="text-gray-600 text-xs">Last updated 3 mins ago</p>
-            </div>
-          </div>
+         
         </div>
       </div>
 
@@ -89,7 +58,8 @@ const Projects = () => {
         </div>
       </div>
 
-      <Form />
+
+
     </>
   );
 };

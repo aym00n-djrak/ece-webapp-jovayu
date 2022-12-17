@@ -4,7 +4,6 @@ import Link from "next/link";
 import Nav from "../public/nav.png";
 import { useContext } from "react";
 import UserContext from "../components/UserContext";
-import Avatar from "../components/Avatar";
 import LoggedIn from "./LoggedIn";
 
 function Navbar() {

@@ -20,7 +20,6 @@ export default function Login() {
       <Head>
         <title>Login</title>
       </Head>
-      <div className="container">
       {!session ? (
         <Auth
           providers={["github"]}
@@ -32,7 +31,6 @@ export default function Login() {
         <p>
         </p>
       )}
-      </div>
     </Layout>
   );
 }
