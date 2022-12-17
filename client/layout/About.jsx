@@ -5,6 +5,7 @@ import Trident from "../public/trident.png";
 import { useContext } from "react";
 import UserContext from "../components/UserContext";
 import { useRouter } from "next/router";
+import Articles from "../pages/articles/articlesforall";
 
 const About = () => {
   const router = useRouter();
@@ -30,6 +31,7 @@ const About = () => {
             <HiCode />
             <Image src={Trident}></Image>
           </a>
+          <Articles />
         </div>
       </div>
     </div>

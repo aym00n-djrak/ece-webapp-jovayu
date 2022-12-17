@@ -14,7 +14,7 @@ export default function Profile({ id }) {
       let { data, error, status } = await supabase
         .from("profiles")
         .select(
-          `username,firstname, lastname, zipcode, city, email,adresse, telephone,description, user_id`
+          `username,firstname, lastname, zipcode, city, email, telephone,adresse,description, user_id`
         )
         .eq("user_id", id)
         .single();
@@ -76,7 +76,7 @@ export default function Profile({ id }) {
       ])
       .single();
     if (error) {
-      setMessage("Désolé, nous avons rencontre une erreur.");
+      setMessage("Désolé, nous avons rencontre une erreur. Votre compte existe surement deja");
     } else {
       setMessage(
         <div>

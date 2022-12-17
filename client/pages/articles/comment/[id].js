@@ -30,7 +30,7 @@ export default function Comment({ id }) {
     const data = new FormData(e.target);
     const { error } = await supabase
       .from("contacts")
-      .insert([{ firstname: data.get("firstname"), lastname: data.get("lastname"), email: data.get("email"), message: data.get("message") , user_id: user.id, article_id: id}]);
+      .insert([{ firstname: data.get("firstname"), lastname: data.get("lastname"), email: data.get("email"), message: data.get("message") , user_id: user?.id, article_id: id}]);
       if (error) {
       setMessage("Sorry, an unexpected error occured.");
     } else {
@@ -40,7 +40,7 @@ export default function Comment({ id }) {
           <p>Thank you for contacting us. We will get back to you promptly.</p>
         </div>
       );
-      router.push('/sheets')
+      router.push('/')
     }
 
   };

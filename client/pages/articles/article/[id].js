@@ -93,7 +93,7 @@ export default function Articles({ id }) {
           </div>
         )}
 
-        {articles && articles.user_id === user.id && (
+        {articles && articles.user_id === user?.id && (
           <>
             <button className="btn btn-primary" onClick={deleteData}>
               Delete
