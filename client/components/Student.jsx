@@ -2,7 +2,7 @@ const Student = ({user}) => {
 
     return (
         <>
-        <h2 className="text-center text-3xl font-bold m-4">Student : </h2>
+        <h2 id="student" className="text-center text-3xl font-bold m-4">Student : </h2>
         <div className="flex justify-center m-4">        
 
         <div className="flex justify-center m-2">
