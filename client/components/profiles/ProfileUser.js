@@ -9,8 +9,6 @@ export default function Profile({ id }) {
   const supabase = useSupabaseClient();
   const [message, setMessage] = useState(null);
 
-
-
   useEffect(() => {
     (async () => {
       let { data, error, status } = await supabase
