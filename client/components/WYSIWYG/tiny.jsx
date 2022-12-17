@@ -10,6 +10,8 @@ export default function Tiny() {
   };
   return (
     <>
+            <h2 className="p-4 flex justify-center"> WYSIWYG :</h2>
+
       <Editor
         apiKey='6du1oa25hr8obbidscpzs8ofhplaknxqh2v6jj5pr3df15re'
         onInit={(evt, editor) => editorRef.current = editor}

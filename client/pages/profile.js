@@ -4,7 +4,7 @@ import Head from "next/head";
 import Layout from "../layout";
 import UserContext from "../components/UserContext";
 import Avatar from "../components/Avatar";
-import Profile from "./profiles/profileuser";
+import Profile from "../components/profiles/profileuser";
 
 export default function Contact() {
   const { user, logout, loading } = useContext(UserContext);

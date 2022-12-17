@@ -2,15 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { HiCode } from "react-icons/hi";
 import Trident from "../public/trident.png";
-import { useContext } from "react";
-import UserContext from "../components/UserContext";
-import { useRouter } from "next/router";
-import Articles from "../pages/articles/articlesforall";
 
-const About = () => {
-  const router = useRouter();
-  const { user } = useContext(UserContext);
-
+const Header = () => {
   return (
     <div className="flex w-full h-screen text-center">
       <div className="w-full h-full mx-auto p-2 flex justify-center">
@@ -20,7 +13,7 @@ const About = () => {
           </h1>
 
           <h3 className="text-gray-700 dark:text-white">
-           Prenez le temps de lire mes articles, de commenter et de partager.
+            Prenez le temps de lire mes articles, de commenter et de partager.
           </h3>
 
           <a
@@ -31,11 +24,10 @@ const About = () => {
             <HiCode />
             <Image src={Trident}></Image>
           </a>
-          <Articles />
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default Header;

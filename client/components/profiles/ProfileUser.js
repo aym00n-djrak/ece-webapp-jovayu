@@ -9,6 +9,8 @@ export default function Profile({ id }) {
   const supabase = useSupabaseClient();
   const [message, setMessage] = useState(null);
 
+
+
   useEffect(() => {
     (async () => {
       let { data, error, status } = await supabase
@@ -76,7 +78,9 @@ export default function Profile({ id }) {
       ])
       .single();
     if (error) {
-      setMessage("Désolé, nous avons rencontre une erreur. Votre compte existe surement deja");
+      setMessage(
+        "Désolé, nous avons rencontre une erreur. Votre compte existe surement deja"
+      );
     } else {
       setMessage(
         <div>
@@ -121,12 +125,11 @@ export default function Profile({ id }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     
-        <h1 className="wt-title p-4">Votre profile :</h1>
-        <div className="flex align-right p-4">
+      <h1 className="wt-title p-4">Votre profile :</h1>
+      <div className="flex align-right p-4">
         <p>
-          Si vous n avez pas encore cree votre profile, remplissez le formulaire et cliquez ici :
-        
+          Si vous n avez pas encore cree votre profile, remplissez le formulaire
+          et cliquez ici :
           <button
             className="rounded m-4 py-1 px-3 text-white bg-slate-500 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
             onClick={insertProfile}
@@ -308,6 +311,8 @@ export default function Profile({ id }) {
                 </div>
               </>
             )}
+
+
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Nav from "../public/nav.png";
 import { useContext } from "react";
 import UserContext from "../components/UserContext";
 import LoggedIn from "./LoggedIn";
+import DarkMode from "./DarkMode";
 
 function Navbar() {
   const { user } = useContext(UserContext);
@@ -21,6 +22,9 @@ function Navbar() {
         <Link href="/sheets">Mes Articles</Link>
 
         <Link href="/messages">Mes Commentaires</Link>
+
+        <DarkMode />
+
         <div>
           <div>
             <h5 className="text-xl font-medium leading-tight mb-2">
