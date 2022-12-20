@@ -56,7 +56,7 @@ export default function ArticlesUpdate({ id }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="wt-title m-4 text-2xl font-bold text-left">
-        Modification de l'article:{" "}
+        Modification de l article:{" "}
         <span className="underline decoration-sky-500">
           {" "}
           {articles?.titre}{" "}

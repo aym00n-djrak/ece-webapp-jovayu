@@ -19,8 +19,8 @@ const Student = ({ user }) => {
                 Citation:{" "}
               </h5>
               <p className="text-gray-700 text-base mb-4">
-                "Je ne suis rien, je le sais, mais je compose mon rien avec un
-                petit morceau de tout.""
+                Je ne suis rien je le sais mais je compose mon rien avec un
+                petit morceau de tout.
               </p>
               <p className="text-gray-600 text-xs">Victor Hugo</p>
             </div>
@@ -32,7 +32,7 @@ const Student = ({ user }) => {
             <div className="p-6 flex flex-col justify-start">
               <h5 className="text-gray-900 text-xl font-medium mb-2">Bali: </h5>
               <p className="text-gray-700 text-base mb-4">
-                “Le monde est un grand bal où chacun est masqué.”
+                Le monde est un grand bal ou chacun est masque.
               </p>
               <p className="text-gray-600 text-xs">De Vauvenarges</p>
             </div>
