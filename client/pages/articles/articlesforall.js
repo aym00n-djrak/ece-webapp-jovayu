@@ -51,7 +51,7 @@ export default function Articles() {
                     scope="col"
                     className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
                   >
-                    Choix
+                  
                   </th>
                 </tr>
               </thead>
@@ -73,7 +73,7 @@ export default function Articles() {
                         href={`/articles/article/${article.id}`}
                       >
                         <ChevronRightIcon
-                          className="h-5 w-5 "
+                          className="h-5 w-5 dark:text-zinc-900"
                           aria-hidden="true"
                         />
                       </Link>

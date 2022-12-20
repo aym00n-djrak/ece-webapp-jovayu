@@ -1,33 +1,46 @@
-const Student = ({user}) => {
-
-    return (
-        <>
-        <h2 id="student" className="text-center text-3xl font-bold m-4">Student : </h2>
-        <div className="flex justify-center m-4">        
-
+import Image from "next/image";
+import Book from "../public/book.jpg";
+import Asia from "../public/asia.jpg";
+import { motion } from "framer-motion";
+const Student = ({ user }) => {
+  return (
+    <>
+      <motion.div initial="hidden" animate="visible">
+        <h2 id="student" className="text-center text-3xl font-bold m-4">
+          Culture :{" "}
+        </h2>
+      </motion.div>
+      <div className="flex justify-center m-4">
         <div className="flex justify-center m-2">
           <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-4">
-            <img
-              className=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
-              src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
-              alt=""
-            />
+            <Image src={Book} alt="book" />
             <div className="p-6 flex flex-col justify-start">
               <h5 className="text-gray-900 text-xl font-medium mb-2">
-                Skills:{" "}
+                Citation:{" "}
               </h5>
               <p className="text-gray-700 text-base mb-4">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                "Je ne suis rien, je le sais, mais je compose mon rien avec un
+                petit morceau de tout.""
               </p>
-              <p className="text-gray-600 text-xs">Last updated 3 mins ago</p>
+              <p className="text-gray-600 text-xs">Victor Hugo</p>
             </div>
           </div>
         </div>
+        <div className="flex justify-center m-2">
+          <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg p-4">
+            <Image src={Asia} alt="book" />
+            <div className="p-6 flex flex-col justify-start">
+              <h5 className="text-gray-900 text-xl font-medium mb-2">Bali: </h5>
+              <p className="text-gray-700 text-base mb-4">
+                “Le monde est un grand bal où chacun est masqué.”
+              </p>
+              <p className="text-gray-600 text-xs">De Vauvenarges</p>
+            </div>
+          </div>
         </div>
-      </>
-    )
-}
+      </div>
+    </>
+  );
+};
 
-export default Student
+export default Student;

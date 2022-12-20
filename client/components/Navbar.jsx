@@ -13,15 +13,23 @@ function Navbar() {
     <nav>
       <div className="justify-between items-center text-center inline-block flex flex-wrap bg-violet-500 text-white">
         <Link href="/">
-          <a>
+          <a className="inline-block p-2 mr-4">
             <Image src={Nav} alt="nav" width={100} height={100} />
           </a>
         </Link>
         <div></div>
 
-        <Link href="/sheets">Mes Articles</Link>
+        <Link href="/sheets">
+          <a className="transition ease-in text-xl font-medium leading-tight mb-2 hover:text-red-500">
+            Mes Articles
+          </a>
+        </Link>
 
-        <Link href="/messages">Mes Commentaires</Link>
+        <Link href="/messages">
+          <a className="grid text-xl font-medium leading-tight mb-2">
+            Mes Commentaires
+          </a>
+        </Link>
 
         <DarkMode />
 
@@ -32,11 +40,8 @@ function Navbar() {
             </h5>
           </div>
 
-          <div
-            id="button"
-            className="rounded-full bg-violet-500 text-white"
-          >
-            <LoggedIn/>
+          <div id="button" className="rounded-full bg-violet-500 text-white">
+            <LoggedIn className="rounded-full bg-violet-500 text-white" />
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export default function Admin() {
     (async () => {
       let { data, error, status } = await supabase
         .from("contacts")
-        .select(`id, firstname, lastname, email, user_id`);
+        .select(`*`);
       setContacts(data);
     })();
   }, [supabase]);
@@ -34,6 +34,9 @@ export default function Admin() {
             <table className="min-w-full divide-y divide-slate-300">
               <thead className="bg-slate-50">
                 <tr>
+                  <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900">
+                    Date
+                  </th>
                   <th
                     scope="col"
                     className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-slate-900 sm:pl-6"
@@ -62,6 +65,10 @@ export default function Admin() {
                 {contacts.map((contact) => (
                   <tr key={contact.email}>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
+                      {contact.created_at.split("T")[1].split(".")[0]} le{" "}
+                      {contact.created_at.split("T")[0]}
+                    </td>
+                    <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
                       {contact.firstname}
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
@@ -78,7 +85,7 @@ export default function Admin() {
                         href={`/admin/contactsmes/${contact.id}`}
                       >
                         <ChevronRightIcon
-                          className="h-5 w-5 "
+                          className="h-5 w-5 dark:text-zinc-900"
                           aria-hidden="true"
                         />
                       </Link>

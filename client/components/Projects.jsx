@@ -2,9 +2,6 @@ import React from "react";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { DiCodeigniter } from "react-icons/di";
-import { useContext } from "react";
-import UserContext from "./UserContext";
-import { useRouter } from "next/router";
 
 const Projects = () => {
 

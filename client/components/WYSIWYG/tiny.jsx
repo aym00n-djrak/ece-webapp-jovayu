@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
+import { CpuChipIcon } from '@heroicons/react/20/solid';
 
 export default function Tiny() {
   const editorRef = useRef(null);
@@ -7,11 +8,12 @@ export default function Tiny() {
     if (editorRef.current) {
       console.log(editorRef.current.getContent());
     }
+
   };
   return (
     <>
-            <h2 className="p-4 flex justify-center"> WYSIWYG :</h2>
 
+    <h2 className='text-2xl font-bold text-center'>WYSIWYG</h2>
       <Editor
         apiKey='6du1oa25hr8obbidscpzs8ofhplaknxqh2v6jj5pr3df15re'
         onInit={(evt, editor) => editorRef.current = editor}
@@ -31,7 +33,6 @@ export default function Tiny() {
           content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
         }}
       />
-      <button onClick={log} hidden>Log editor content</button>
     </>
   );
 }

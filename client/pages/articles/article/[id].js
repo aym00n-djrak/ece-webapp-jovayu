@@ -38,7 +38,6 @@ export default function Articles({ id }) {
     })();
   }, [id, supabase]);
 
-  //fonction delete
 
   const deleteData = async () => {
     const { data, error } = await supabase
@@ -54,6 +53,21 @@ export default function Articles({ id }) {
         console.log("error", error);
       });
   };
+
+  const flushComments = async () => {
+    const { data, error } = await supabase
+
+      .from("contacts")
+      .delete()
+      .eq("article_id", id)
+      .then(() => {
+        window.location.href = "/sheets";
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  };
+
 
   //afficher le formulaire de modification
   const updateData = async () => {
@@ -95,19 +109,50 @@ export default function Articles({ id }) {
 
         {articles && articles.user_id === user?.id && (
           <>
-            <button className="btn btn-primary" onClick={deleteData}>
-              Delete
-            </button>
+            <div class="flex space-x-2 justify-center p-2">
+              <button
+                type="button"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                onClick={deleteData}
+              >
+                Delete
+              </button>
+              
 
-            <button className="btn btn-primary" onClick={updateData}>
-              Update
-            </button>
+              <button
+                type="button"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                onClick={flushComments}
+              >
+                Vider les commentaires
+              </button>
+              <button
+                type="button"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+                class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                onClick={updateData}
+              >
+                Update
+              </button>
+            </div>
           </>
         )}
+        <div class="flex space-x-2 justify-center">
+          <button
+            type="button"
+            class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
+            onClick={commentArticle}
+          >
+            Commenter
+          </button>
+        </div>
 
-        <button className="btn btn-primary" onClick={commentArticle}>
-          Commenter
-        </button>
+        
 
         <h2 className="wt-title p-4">Commentaires :</h2>
 
@@ -127,7 +172,7 @@ export default function Articles({ id }) {
                       scope="col"
                       className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
                     >
-                        Message
+                      Message
                     </th>
                   </tr>
                 </thead>
@@ -140,7 +185,6 @@ export default function Articles({ id }) {
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
                         <pre>{comment.message}</pre>
                       </td>
-                      
                     </tr>
                   ))}
                 </tbody>

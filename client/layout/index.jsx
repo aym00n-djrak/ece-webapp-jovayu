@@ -2,7 +2,9 @@ import React, { useContext } from "react";
 import Footer from "../components/Footer";
 import ThemePicker from "../components/theme-picker";
 import ThemeContext from '../context/theme-context';
-import Navbar from "../components/Navbar";
+import dynamic from "next/dynamic";
+
+const  Navbar = dynamic( () => import("../components/Navbar"), { ssr: false } );
 
 const Layout = ({ children }) => {
   //const { theme, switchTheme } = useContext(ThemeContext);
