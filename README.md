@@ -175,6 +175,14 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   - Le bouton login ouvre une page de connexion, sous la forme d'un formulaire Auth fourni par Supabase et il utilise Github Provider en option pour se connecter.
 
+  - Le Github Provider permet à l'utilisateur de se connecter avec son compte Github. 
+
+  - Il faut faire ATTENTION, car lorsque l'on s'identifie avec Github Provider l'adresse retournée pour le retour au blogging App est une localhost, il faut donc changer l'adresse dans le fichier .env.local pour que cela fonctionne.
+
+  - Le formulaire Auth permet à l'utilisateur de se connecter avec son adresse email et son mot de passe.
+
+
+
   - Connected :
 
     ![Login/Logout button](/pictures/logout.png)
