@@ -33,13 +33,14 @@ Comment lancer notre application, effectuer des tests, etc.
 
 4. Cloner ce dépôt: [Portfolio JovaYu](https://github.com/aym00n-djrak/ece-webapp-jovayu)
 
-5. Se deplacer dans le dossier "app"
+5. Se deplacer dans le dossier "app" puis dans le dossier "client":
 
 ```bash
 cd app
+cd client
 ```
 
-5. Installer les dépendances nodes requises:
+6. Installer les dépendances nodes requises:
 
 ```bash
 npm i
@@ -83,6 +84,8 @@ npm run start
 
 Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
+- De plus, le site est disponible sur [Vercel](https://ece-webapp-jovayu.vercel.app/)
+
 ## Tâches effectuées
 
 ### Management du projet:
@@ -107,9 +110,13 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
     - Le dossier "styles" contient les styles de l'application. On utilise le framework TailwindCSS.
 
+    - le dossier "context" contient les contextes de l'application. (Theme, stockage local, etc.)
+
   - Le dossier "supabase" contient le code source de la base de données locale.
 
   - Le dossier "server" contient le code source du serveur.
+
+  - Le dossier "pictures" contient les captures d'écran de l'application pour le README.
 
 - Git:
 
@@ -164,7 +171,9 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
   - Le bouton login ouvre une page de connexion, sous la forme d'un formulaire Auth fourni par Supabase et il utilise Github Provider en option pour se connecter.
 
   - Connected :
+
     ![Login/Logout button](/pictures/logout.png)
+
   - Le bouton logout permet à l'utilisateur de se déconnecter de son compte , il est redirigé vers la page de connexion:
 
     ![Login/Logout button](/pictures/logoutbutton.png)
