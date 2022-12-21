@@ -10,6 +10,7 @@ export default function Articles() {
   const router = useRouter();
   const [articles, setArticles] = useState([]);
   const supabase = useSupabaseClient();
+
   useEffect(() => {
     (async () => {
       let { data, error, status } = await supabase
@@ -21,6 +22,7 @@ export default function Articles() {
   const createArticle = async () => {
     router.push("/articles/CreaArticle");
   };
+  
   return (
     <>
       <Head>

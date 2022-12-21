@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
-import { CpuChipIcon } from '@heroicons/react/20/solid';
 
 export default function Tiny() {
   const editorRef = useRef(null);

@@ -1,8 +1,4 @@
 import React from "react";
-import { AiOutlineMediumWorkmark } from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { DiCodeigniter } from "react-icons/di";
-import { GiBurningSkull } from "react-icons/gi";
 import Image from "next/image";
 
 const Projects = () => {

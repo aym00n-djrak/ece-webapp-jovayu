@@ -2,6 +2,7 @@ import Image from "next/image";
 import Book from "../public/book.jpg";
 import Asia from "../public/asia.jpg";
 import { motion } from "framer-motion";
+
 const Student = ({ user }) => {
   return (
     <>

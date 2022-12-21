@@ -6,9 +6,6 @@ import Layout from "../../../layout";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import UserContext from "../../../components/UserContext";
-import { CpuChipIcon } from "@heroicons/react/20/solid";
-import { DiWindows } from "react-icons/di";
-import Link from "next/link";
 
 export default function Articles({ id }) {
   const router = useRouter();
