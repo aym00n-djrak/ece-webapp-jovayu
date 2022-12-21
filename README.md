@@ -144,6 +144,9 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   - Utilisation de Tiny pour le WYSIWYG.
 
+  - Utilisation de Gravatar pour les avatars.
+
+
 ### Developpement de l'application:
 
 - Page d'accueil:
@@ -160,7 +163,9 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
     ![Affichage d'un WYSIWYG pour écrire un article](/pictures/wysiwyg.png)
 
-  - Intégration de lien externe.
+  - Intégration de lien externe :
+
+    ![Intégration de lien externe](/pictures/lien.png)
 
 - Login/Logout:
 
@@ -174,9 +179,14 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
     ![Login/Logout button](/pictures/logout.png)
 
-  - Le bouton logout permet à l'utilisateur de se déconnecter de son compte , il est redirigé vers la page de connexion:
+    Une fois connecté, l'utilisateur est redirigé vers la page d'accueil. Il peut voir son avatar et son nom d'utilisateur sur la Navbar.
+
+  - Le bouton logout est situé dans la page profil, il permet à l'utilisateur de se déconnecter de son compte , il est redirigé vers la page de connexion:
 
     ![Login/Logout button](/pictures/logoutbutton.png)
+
+    Nous avons choisi de le placer ici pour éviter que l'utilisateur ne se déconnecte par erreur.
+    Et cela ne surcharge pas la Navbar.
 
   - La connexion est persistante, c'est-à-dire que l'utilisateur n'a pas besoin de se connecter à chaque fois qu'il visite le site.
 
@@ -220,7 +230,10 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   - L'accès aux ressources est contrôlé par les rôles de l'utilisateur.
 
-  - Il est activé sur chaque table de la base de données.
+  - Il est activé sur chaque table de la base de données :
+
+    ![Contrôle de l'accès au ressources](/pictures/rls.png)
+
 
   - Plusieurs politiques de sécurité sont utilisées pour contrôler l'accès aux ressources. (En fonction de INSERT, SELECT, UPDATE, DELETE)
 
@@ -269,6 +282,8 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   - L'article est supprimé de la base de données lorsque l'on clique sur le bouton DELETE.
 
+  - Seul les utilisateurs connectés peuvent supprimer des articles qu'ils ont créés.
+
 - Modification d'un commentaire (que pour les utilisateurs authentifiés):
 
   - Un bouton permet la modification d'un commentaire que vous avez créé:
@@ -282,6 +297,9 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
   - Un formulaire de modification de commentaire est utilisé pour modifier un commentaire :
 
     ![Modification d'un commentaire](/pictures/modifcomment.png)
+
+    La modification d'un commentaire est possible que pour les utilisateurs authentifiés.
+    De plus, on peut modifier uniquement les commentaires que nous avons créés.
 
   - Le commentaire peut prendre en paramètre un Firstname, Lastname, email et un contenu.
 
@@ -358,6 +376,10 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   - Il permet de mettre en forme le contenu de l'article.
 
+  - Ici on peut mettre en gras, en italique, mettre un lien, mettre une image, mettre une liste, mettre un titre, mettre un sous-titre, mettre un texte en couleur, mettre un texte en taille, mettre un texte en alignement.
+
+  - Il est surtout utilisé sur notre site comme un Playground pour tester les fonctionnalités de l'éditeur et rédiger un article.
+
   - Il est intégré dans la page d'accueil pour rediger un nouvel article :
 
     ![WYSIWYG integration](/pictures/wysiwyg.png)
@@ -371,6 +393,9 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
   - Il est mis en place en fonction de l'email de l'utilisateur :
 
     ![Gravatar integration](/pictures/aymoon.png) ![Gravatar integration](/pictures/julien.png)
+
+
+  - Pour configuer Gravatar, il faut aller sur le site de [Gravatar](https://fr.gravatar.com/) et mettre l'email de l'utilisateur.
 
 - Sombre/Clair mode:
 
