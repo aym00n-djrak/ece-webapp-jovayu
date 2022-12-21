@@ -20,6 +20,7 @@ export default function LoggedIn() {
           <Avatar/>
           <h3 className="text-sm transition-colors duration-200 ease-in-out hover:text-slate-900 hover:underline hover:cursor-pointer m-3"
           >{user.user_metadata.preferred_username}</h3>
+          
         </>
       ) : (
         <>

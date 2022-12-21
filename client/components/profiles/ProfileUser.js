@@ -123,7 +123,7 @@ export default function Profile({ id }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="wt-title m-4 text-2xl font-bold text-left text-center
-      ">Votre profile :</h1>
+      ">Votre profil :</h1>
      
 
 
@@ -298,7 +298,7 @@ export default function Profile({ id }) {
                 </div>
                 <div className="flex align-right p-4">
         <p>
-          Si vous n avez pas encore cree votre profile, remplissez le formulaire
+          Si vous n avez pas encore cree votre profil, remplissez le formulaire
           et cliquez ici :
           <button
             className="rounded m-4 py-1 px-3 text-white bg-slate-500 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"

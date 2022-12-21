@@ -2,19 +2,14 @@
 
 ## Introduction
 
-Voici notre portfolio réalisé avec NextJS !
+Voici notre Blogging APP réalisé avec NextJS !
 
-- Ce travail a été effectué par notre équipe de deux personnes (Rémy JOVANOVIC et ShiHao YU) \*pendant près d'un semestre.
-- Notre projet final est une application de blogging Web, chaque utilisateur qui se connecte doit entrer son compte et son mot de passe, et tous les utilisateurs qui utilisent des programmes externes pour se connecter ont besoin d'une authentification tierce.
+## Description
 
-- Tous les utilisateurs ou visiteurs connectés peuvent choisir de parcourir les articles publiés par d'autres auteurs et laisser leurs commentaires.
-- Seuls les utilisateurs connectés au blog peuvent publier leurs propres articles, les visiteurs ne sont pas autorisés.
-- En outre, les auteurs d'articles peuvent choisir d'éditer leurs articles, tels que modifier ou supprimer.
-- De plus, les auteurs sont également autorisés à modifier ou supprimer les commentaires qu'ils n'aiment pas.
-- Le forum dispose d'une base de données dédiée pour stocker tous les articles et commentaires.
-- Si les touristes souhaitent publier des articles, ils doivent accéder à l'interface d'inscription pour s'inscrire et renseigner les informations personnelles de l'utilisateur, dont certaines seront conservées sur l'interface utilisateur suivante.
-- Dans l'interface utilisateur, l'utilisateur peut modifier ses paramètres personnels email, nom, langue..., l'utilisateur peut choisir d'afficher ou non ces attributs.
-- De plus, les utilisateurs sont autorisés à choisir leur avatar, la couleur de l'interface utilisateur, la taille du champ de recherche, etc.
+- L'application dispose d'une base de données dédiée pour stocker tous les articles et commentaires.
+
+- Les utilisateurs sont invités à choisir leur Avatar (via [Gravatar](https://fr.gravatar.com/)), le thème de l'interface utilisateur (clair / sombre), etc..
+
 - Dans notre projet, nous ferons de notre mieux pour offrir aux utilisateurs la meilleure expérience.
 
 Dans les sections suivantes, nous détaillerons comment installer et exécuter notre programme.
@@ -401,7 +396,7 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
   - Il est intégré dans la page d'accueil.
   - Il est mis en place en fonction du thème choisi par l'utilisateur.
   - Il est géré par :
-
+ 
   ```css
    /components/theme-picker.js /components/theme-script.js
    /context/theme-context.js
@@ -419,7 +414,7 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 | Project structure                                               |   STRUCT  |    +2     |    +2     |
 | Github                                                          |   GIT     |    +2     |    +2     |
 | Code Quality                                                    |   CODEQ   |    +4     |    +3     |
-| Design, UX, and content     	                                  |   UX      |    +4     |    +3     |
+| Design, UX, and content     	                                  |   UX      |    +4     |    +4     |
 | Home page                                                       |   HOME    |    +2     |    +2     |
 | Login and profile page                                          |   LOGIN   |    +4     |    +4     |
 | New Articles creation                                           |   ART C   |    +6     |    +6     |
@@ -434,8 +429,7 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 | Gravatar integration                                            |   GRAV    |    +2     |    +2     |
 | Dark/Light mode                                                 |   DARK    |    +2     |    +2     |
 | Customized color                                                |   COLOR   |    +4     |    +2     |
-| **Total**                                                       |           |    60     |    54     |
-
+| **Total**                                                       |           |    60     |    56     |
 
 ## Auteurs
 
