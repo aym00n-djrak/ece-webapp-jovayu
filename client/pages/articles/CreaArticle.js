@@ -31,7 +31,7 @@ export default function CreaArticle() {
         <div>
           <h2 className="text-center mt-3">Confirmation</h2>
           <p>
-            Merci d avoir poste un commentaire, nous vous recontacterons le plus
+            Merci d avoir poste un article, nous vous recontacterons le plus
             vite possible
           </p>
         </div>
@@ -39,6 +39,7 @@ export default function CreaArticle() {
       router.push("/sheets");
     }
   };
+
   return (
     <Layout>
       <Head>
@@ -76,7 +77,6 @@ export default function CreaArticle() {
                 type="text"
                 name="auteur"
                 className="border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
-                value={user ? user.email : ""}
                 placeholder="Auteur"
               />
             </div>

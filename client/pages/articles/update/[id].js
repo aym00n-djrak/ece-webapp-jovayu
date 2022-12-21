@@ -62,44 +62,6 @@ export default function ArticlesUpdate({ id }) {
           {articles?.titre}{" "}
         </span>
       </h1>{" "}
-      <form>
-        <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-          <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
-            <textarea
-              id="contenu"
-              name="contenu"
-              rows="4"
-              class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-              placeholder="Write an article..."
-              value={articles?.contenu || ""}
-            >
-            </textarea>
-          </div>
-          <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
-            <div class="flex items-center space-x-2">
-              <input
-                type="text"
-                name="titre"
-                className="border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
-                placeholder="Titre"
-                value={articles?.titre || ""}
-              >
-              </input>
-              <input
-                type="text"
-                name="auteur"
-                className="border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
-                value={articles?.auteur}
-                placeholder="Auteur"
-              />
-            </div>
-
-          </div>
-        </div>
-      </form>
-      <h1 className="wt-title m-4 text-2xl font-bold text-left">
-        Modification:
-      </h1>{" "}
       <form onSubmit={onSubmit}>
         <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
           <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
@@ -109,8 +71,9 @@ export default function ArticlesUpdate({ id }) {
               rows="4"
               class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
               placeholder="Write an article..."
-            >
-            </textarea>
+              value={articles?.contenu}
+              onChange={(e) => setArticle(e.target.value)}
+            ></textarea>
           </div>
           <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
             <div class="flex items-center space-x-2">
@@ -119,13 +82,16 @@ export default function ArticlesUpdate({ id }) {
                 name="titre"
                 className="border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
                 placeholder="Titre"
-              >
-              </input>
+                value={articles?.titre}
+                onChange={(e) => setArticle(e.target.value)}
+              ></input>
               <input
                 type="text"
                 name="auteur"
                 className="border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600"
                 placeholder="Auteur"
+                value={articles?.auteur}
+                onChange={(e) => setArticle(e.target.value)}
               />
             </div>
             <button
