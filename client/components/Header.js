@@ -20,9 +20,12 @@ const Header = () => {
             href="#student"
             className="mt-12 flex flex-col gap-2 text-green-500 max-w-[300px] m-auto justify-center items-center"
           >
-            <span className="animate-bounce">A mon propos !</span>
+            <span className="animate-bounce">A propos !</span>
             <HiCode />
-            <Image src={Trident} alt="Trident" width={200} height={200} />
+
+            <div className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <Image src={Trident} alt="Trident"/>
+            </div>
           </a>
         </div>
       </div>

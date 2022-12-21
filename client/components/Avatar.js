@@ -13,8 +13,9 @@ export default function Avatar() {
   const myLoader = ({ src, width, quality }) => {
     return (`https://www.gravatar.com/avatar/${emailHash}?s=200`)
   }
+
   return (
-    <p className="flex gap-2 [&_svg]:h-6 [&_svg]:w-6">
+    <p className="flex gap-2 [&_svg]:h-6 [&_svg]:w-6 transform hover:scale-110 transition duration-500 ease-in-out">
 
       <Image 
         loader={myLoader}

@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <Layout>
       <div>
-        <Head>
+      <Head>
           <title>{user?.name} | IA Learner</title>
           <meta name="description" content="I'm a student at ECE" />
         </Head>

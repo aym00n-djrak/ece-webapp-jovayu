@@ -11,9 +11,9 @@ export default function Tiny() {
 
   };
   return (
-    <>
+    <div className='flex flex-col' >
 
-    <h2 className='text-2xl font-bold text-center'>WYSIWYG</h2>
+    <h2 className='text-2xl font-bold text-center m-10'>WYSIWYG :</h2>
       <Editor
         apiKey='6du1oa25hr8obbidscpzs8ofhplaknxqh2v6jj5pr3df15re'
         onInit={(evt, editor) => editorRef.current = editor}
@@ -33,6 +33,6 @@ export default function Tiny() {
           content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
         }}
       />
-    </>
+    </div>
   );
 }

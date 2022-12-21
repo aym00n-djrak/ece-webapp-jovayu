@@ -13,20 +13,20 @@ function Navbar() {
     <nav>
       <div className="justify-between items-center text-center inline-block flex flex-wrap bg-violet-500 text-white">
         <Link href="/">
-          <a className="inline-block p-2 mr-4">
+          <a className="inline-block p-2 mr-4 text-xl transition transform hover:scale-110">
             <Image src={Nav} alt="nav" width={100} height={100} />
           </a>
         </Link>
         <div></div>
 
         <Link href="/sheets">
-          <a className="transition ease-in text-xl font-medium leading-tight mb-2 hover:text-red-500">
+          <a className="transition ease-in text-xl font-medium leading-tight mb-2 hover:text-rose-700">
             Mes Articles
           </a>
         </Link>
 
         <Link href="/messages">
-          <a className="grid text-xl font-medium leading-tight mb-2">
+        <a className="transition ease-in text-xl font-medium leading-tight mb-2 hover:text-rose-700">
             Mes Commentaires
           </a>
         </Link>
@@ -41,7 +41,7 @@ function Navbar() {
           </div>
 
           <div id="button" className="rounded-full bg-violet-500 text-white">
-            <LoggedIn className="rounded-full bg-violet-500 text-white" />
+            <LoggedIn className="rounded-full bg-violet-500 text-white"/>
           </div>
         </div>
       </div>

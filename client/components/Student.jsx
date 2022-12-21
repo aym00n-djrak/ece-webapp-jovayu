@@ -6,7 +6,7 @@ const Student = ({ user }) => {
   return (
     <>
       <motion.div initial="hidden" animate="visible">
-        <h2 id="student" className="text-center text-3xl font-bold m-4">
+        <h2 id="student" className="text-center text-3xl font-bold m-10">
           Culture :{" "}
         </h2>
       </motion.div>

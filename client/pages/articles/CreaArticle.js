@@ -11,10 +11,16 @@ export default function CreaArticle() {
   const { user } = useContext(UserContext);
   const supabase = useSupabaseClient();
   const [message, setMessage] = useState(null);
+  const [annule, setAnnule] = useState(false);
 
   const onSubmit = async function (e) {
     e.preventDefault();
     const data = new FormData(e.target);
+    if(annule === true){
+            alert("Votre article est annule");
+            router.push("/sheets");
+    }
+    else {
     const { error } = await supabase.from("articles").insert([
       {
         titre: data.get("titre"),
@@ -39,6 +45,7 @@ export default function CreaArticle() {
       router.push("/sheets");
     }
   };
+  };
 
   return (
     <Layout>
@@ -54,7 +61,7 @@ export default function CreaArticle() {
         Ecrire un article :{" "}
       </h2>
 
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="flex flex-col items-center">
         <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
           <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
             <textarea
@@ -81,15 +88,14 @@ export default function CreaArticle() {
               />
             </div>
             <button
-              onClick={() => router.push("/sheets")}
+              onClick={() => setAnnule(true)}
               class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
             >
               Cancel Article
             </button>
-            <button
-              type="submit"
-              class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800"
-            >
+            <button 
+            type="submit"
+            class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-900 hover:bg-blue-800">
               Post Article
             </button>
           </div>
