@@ -182,6 +182,20 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
   - Le formulaire Auth permet à l'utilisateur de se connecter avec son adresse email et son mot de passe.
 
 
+  - Configuration de l'authentification :
+
+    - On peut observer la clé d'accès configuré:
+
+    ![Configuration de l'authentification](/pictures/githubauth1.png)
+
+    - On peut observer le fournisseur configuré:
+
+    ![Configuration de l'authentification](/pictures/githubauth.png)
+
+  - Configuration du fournisseur sur supabase:
+
+    ![Configuration de l'authentification](/pictures/githubprovider.png)
+
 
   - Connected :
 
