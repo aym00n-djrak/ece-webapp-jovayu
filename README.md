@@ -177,7 +177,7 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   - Le Github Provider permet à l'utilisateur de se connecter avec son compte Github. 
 
-  - Il faut faire ATTENTION, car lorsque l'on s'identifie avec Github Provider l'adresse retournée pour le retour au blogging App est une localhost, il faut donc changer l'adresse dans le fichier .env.local pour que cela fonctionne.
+  - Il faut faire ATTENTION, car lorsque l'on s'identifie avec Github Provider l'adresse retournée pour le retour au blogging App est une localhost, il faut donc se connecter avec email et mot de passe sur VERCEL.
 
   - Le formulaire Auth permet à l'utilisateur de se connecter avec son adresse email et son mot de passe.
 
