@@ -18,7 +18,9 @@ function MyApp({ Component, pageProps }) {
     >
           <UserContextProvider>
 
+
       <Component {...pageProps} />
+
       </UserContextProvider>
 
     </SessionContextProvider>
