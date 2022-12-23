@@ -7,7 +7,7 @@ const Student = ({ user }) => {
   return (
     <>
       <motion.div initial="hidden" animate="visible">
-        <h2 id="student" className="text-center text-3xl font-bold m-10 text-secondary">
+        <h2 id="student" className="text-center text-3xl font-bold m-10 text-primary">
           Culture :{" "}
         </h2>
       </motion.div>
