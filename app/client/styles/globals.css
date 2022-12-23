@@ -13,7 +13,7 @@ html {
 
   body {
     @apply text-[#1f2937]  tracking-wide;
-    @apply dark:text-[#ecf0f3];
+    @apply  dark:text-primary;
   }
 
   h1,

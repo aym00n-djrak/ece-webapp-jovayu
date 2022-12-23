@@ -16,7 +16,7 @@ const Projects = () => {
 
   return (
     <>
-      <div id="projects" className="flex grid place-items-center m-10">
+      <div id="projects" className="flex grid place-items-center m-10 text-primary">
         <h2 className="m-10">Some WebSite :</h2>
         <div className="flex grid grid-cols-3 gap-4">
           <div><h3 className="m-3">Hacker News :</h3>

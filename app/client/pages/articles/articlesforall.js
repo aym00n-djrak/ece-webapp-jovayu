@@ -31,7 +31,7 @@ export default function Articles() {
         <link rel="icon" href="/cyberpunk.png" />
       </Head>
 
-      <h2 id="student" className="text-center text-3xl font-bold w-full p-10">
+      <h2 id="student" className="text-center text-3xl font-bold w-full p-10 text-primary">
         Une liste de vos articles favoris :
       </h2>
 

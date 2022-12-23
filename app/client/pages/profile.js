@@ -32,7 +32,7 @@ export default function Contact() {
           <Profile id={user.id} />
 
 
-          <h2 className="flex text-justify p-4">Logout: </h2>
+          <h2 className="flex text-justify p-4 text-primary">Logout: </h2>
 
 <div className="flex justify-center p-4">
           <button

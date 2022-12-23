@@ -31,7 +31,7 @@ export default function Articles() {
         <link rel="icon" href="/cyberpunk.png" />
       </Head>
 
-      <h1 className="wt-title m-4 text-2xl font-bold text-left
+      <h1 className="wt-title m-4 text-2xl font-bold text-left text-primary
       ">Une liste de nos articles :</h1>
       <div >
         <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">

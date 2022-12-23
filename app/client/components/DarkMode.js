@@ -18,7 +18,7 @@ export default function DarkMode() {
                 {theme === "dark" ? <TiAdjustBrightness size={30}
                 /> : <TiWeatherNight size={30}/>} </button>
 
-<select className='bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' data-choose-theme>
+<select className='text-primary bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' data-choose-theme>
     
     {themeValues.map((value) => (
       <option className="text-primary" value={value.toLowerCase()} key = {value}
