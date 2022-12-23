@@ -55,7 +55,7 @@ export default function CreaArticle() {
         <link rel="icon" href="/cyberpunk.png" />
       </Head>
       <h2
-        className="wt-title text-center m-3
+      className="wt-title m-4 text-2xl font-bold text-left text-primary
       "
       >
         Ecrire un article :{" "}
