@@ -7,7 +7,7 @@ import { themeChange} from "theme-change"
 export default function DarkMode() {
   const { theme, setTheme } = useTheme();
   const themeValues = 
-    ["synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "dracula", "cmyk", "autumn"]
+    ["Default","synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "dracula", "cmyk", "autumn"]
 
   useEffect(() => {themeChange(false)})
 
