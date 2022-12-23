@@ -6,9 +6,13 @@ import { useContext } from "react";
 import UserContext from "../components/UserContext";
 import LoggedIn from "./LoggedIn";
 import DarkMode from "./DarkMode";
+import { useEffect } from 'react'
+import { themeChange} from "theme-change"
 
 function Navbar() {
   const { user } = useContext(UserContext);
+
+
   return (
     <nav>
       <div className="justify-between items-center text-center inline-block flex flex-wrap bg-violet-500 text-white">

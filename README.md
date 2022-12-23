@@ -451,15 +451,33 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
   - Il permet de changer la couleur de l'application.
   - Il est intégré dans la page d'accueil.
   - Il est mis en place en fonction du thème choisi par l'utilisateur.
-  - Il est géré par :
- 
-  ```css
-   /components/theme-picker.js /components/theme-script.js
-   /context/theme-context.js
-   /context/use-local-storage.js
+  - Il est géré par la librairie [daisyui](https://daisyui.com/).
+  - Il est mis en place dans le fichier tailwind.config;js :
+
+  ```js
+    plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("tailwindcss-font-inter"),
+    require('daisyui')
+  ]
   ```
 
-  - Les thèmes sont stockés dans le global.css et appliqué grâce à tailwind.config.js
+  - Les thèmes sont stockés dans le global.css et appliqué grâce au framework theme-change :  (les themes sont stockés dans un tableau)
+
+  ```js
+  const themeValues = 
+    ["synthwave", "retro", "cyberpunk", "valentine", "halloween", "garden", "forest", "aqua", "dracula", "cmyk", "autumn"]
+  ```
+
+  - Le theme est compatible avec le dark/light mode.
+
+  - Rendu :
+
+   ![Dark mode](/pictures/dark.png) ![Light mode](/pictures/colorchooser.png)
+
+   
+   ![Dark mode](/pictures/dark.png) ![Light mode](/pictures/themechoose.png)
 
 ## Auto-évaluation
 
@@ -484,8 +502,8 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 | WYSIWYG integration                                             |   WYS     |    +2     |    +1     |
 | Gravatar integration                                            |   GRAV    |    +2     |    +2     |
 | Dark/Light mode                                                 |   DARK    |    +2     |    +2     |
-| Customized color                                                |   COLOR   |    +4     |    +2     |
-| **Total**                                                       |           |    60     |    56     |
+| Customized color                                                |   COLOR   |    +4     |    +4     |
+| **Total**                                                       |           |    60     |    58     |
 
 ## Auteurs
 
