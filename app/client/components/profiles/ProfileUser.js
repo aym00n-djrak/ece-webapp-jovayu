@@ -125,7 +125,7 @@ export default function Profile({ id }) {
       <h1 className="wt-title m-4 text-2xl font-bold text-left text-center
       ">Votre profil :</h1>
      
-
+      <h3 className="text-center mt-3">Pour votre premiere connexion, veuillez remplir votre profil</h3>
 
       <div className="flex justify-center p-4">
         <h2 className=" text-center mt-3">

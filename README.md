@@ -473,11 +473,11 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
   - Le theme est compatible avec le dark/light mode.
 
   - Rendu :
+  
+      ![Color mode](/pictures/color.png)
 
-   ![Dark mode](/pictures/dark.png) ![Light mode](/pictures/colorchooser.png)
-
-   
-   ![Dark mode](/pictures/dark.png) ![Light mode](/pictures/themechoose.png)
+      ![Color mode](/pictures/cyberpunk.png)  
+      
 
 ## Auto-évaluation
 
