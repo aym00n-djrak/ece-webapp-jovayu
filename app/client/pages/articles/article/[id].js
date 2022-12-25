@@ -110,12 +110,12 @@ export default function Articles({ id }) {
 
         {articles && articles.user_id === user?.id && (
           <>
-            <div clasName="flex space-x-2 justify-center p-2">
+            <div className="flex space-x-2 justify-center p-2">
               <button
                 type="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
-                clasName="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 onClick={deleteData}
               >
                 Delete
@@ -125,7 +125,7 @@ export default function Articles({ id }) {
                 type="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
-                clasName="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 onClick={flushComments}
               >
                 Vider les commentaires
@@ -134,7 +134,7 @@ export default function Articles({ id }) {
                 type="button"
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="light"
-                clasName="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 onClick={updateData}
               >
                 Update
@@ -145,7 +145,7 @@ export default function Articles({ id }) {
         <div class="flex space-x-2 justify-center">
           <button
             type="button"
-            class="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
+            className="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
             onClick={commentArticle}
           >
             Commenter
@@ -156,10 +156,10 @@ export default function Articles({ id }) {
           Commentaires :
         </h2>
 
-        <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-          <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-            <table className="min-w-full divide-y divide-slate-300">
-              <tbody className="divide-y divide-slate-200 bg-white">
+        <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8 p-3">
+          <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg ">
+            <table className="min-w-full divide-y divide-slate-300 ">
+              <tbody className="divide-y divide-slate-200 bg-white ">
                 {comments.map((comment) => (
                   <div className="overflow-hidden divide-y divide-zinc-700 shadow ring-1 ring-black ring-opacity-5 md:rounded-lg" key={comment.id}>
                     <div className="bg-slate-50">
