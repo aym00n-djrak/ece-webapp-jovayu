@@ -55,7 +55,6 @@ export default function Articles() {
                     scope="col"
                     className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
                   >
-                  
                   </th>
                 </tr>
               </thead>

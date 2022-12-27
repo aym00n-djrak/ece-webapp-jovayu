@@ -10,6 +10,7 @@ export default function ArticlesUpdate({ id }) {
   const [message, setMessage] = useState(null);
   const [articles, setArticle] = useState(null);
   const supabase = useSupabaseClient();
+  const image = null;
 
   useEffect(() => {
     (async () => {
@@ -31,6 +32,7 @@ export default function ArticlesUpdate({ id }) {
         titre: data.get("titre"),
         contenu: data.get("contenu"),
         auteur: data.get("auteur"),
+        image: image?.name,
       })
       .eq("id", id)
       .then(() => {
@@ -46,6 +48,20 @@ export default function ArticlesUpdate({ id }) {
         </div>
       );
     }
+  };
+
+  const InsertImage = async function (e) {
+    e.preventDefault();
+    const file = e.target.files[0];
+    image = file;
+    const { data, error } = await supabase.storage
+      .from("images")
+      .upload(file?.name, file, {
+        cacheControl: "3600",
+        upsert: false,
+      });
+    if (error) throw error;
+    console.log(data);
   };
 
   return (
@@ -74,6 +90,7 @@ export default function ArticlesUpdate({ id }) {
               value={articles?.contenu}
               onChange={(e) => setArticle(e.target.value)}
             ></textarea>
+            <input type="file" name="file" id="file" onChange={InsertImage} />
           </div>
           <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
             <div class="flex items-center space-x-2">

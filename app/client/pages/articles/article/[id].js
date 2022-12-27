@@ -6,6 +6,7 @@ import Layout from "../../../layout";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import UserContext from "../../../components/UserContext";
+import Images from "../../../components/Images";
 
 export default function Articles({ id }) {
   const router = useRouter();
@@ -96,6 +97,8 @@ export default function Articles({ id }) {
                 <dd className="text-zinc-900">{articles.titre}</dd>
                 <dt>Auteur</dt>
                 <dd className="text-zinc-900">{articles.auteur}</dd>
+                <dt></dt>
+                <dd className="text-zinc-900"><Images id={id} /></dd>
               </dl>
             </div>
             <div className="px-3 py-10 text-primary">

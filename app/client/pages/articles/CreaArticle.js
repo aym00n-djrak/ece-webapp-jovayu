@@ -12,6 +12,7 @@ export default function CreaArticle() {
   const supabase = useSupabaseClient();
   const [message, setMessage] = useState(null);
   const [annule, setAnnule] = useState(false);
+  const image = null;
 
   const onSubmit = async function (e) {
     e.preventDefault();
@@ -27,6 +28,7 @@ export default function CreaArticle() {
         contenu: data.get("contenu"),
         auteur: data.get("auteur"),
         user_id: user.id,
+        image: image?.name,
       },
     ]);
 
@@ -46,6 +48,21 @@ export default function CreaArticle() {
     }
   };
   };
+
+  const InsertImage = async function (e) {
+    e.preventDefault();
+    const file = e.target.files[0];
+    image = file;
+    const { data, error } = await supabase.storage
+      .from("images")
+      .upload(file?.name, file, {
+        cacheControl: "3600",
+        upsert: false,
+      });
+    if (error) throw error;
+    console.log(data);
+  };
+
 
   return (
     <Layout>
@@ -71,6 +88,10 @@ export default function CreaArticle() {
               class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
               placeholder="Write an article..."
             ></textarea>
+            
+            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="file_input">Charger une image :</label>
+            <input type="file" name="file" id="file" onChange={InsertImage} className="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"/>
+         
           </div>
           <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
             <div class="flex items-center space-x-2">

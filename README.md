@@ -505,6 +505,16 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 | Customized color                                                |   COLOR   |    +4     |    +4     |
 | **Total**                                                       |           |    60     |    58     |
 
+## Bonus
+
+- Insertion d'image dans article:
+
+  ![Image](/pictures/image.png)
+
+- Modification d'image dans article:
+
+  ![Image](/pictures/image2.png)
+
 ## Auteurs
 
 - Rémy JOVANOVIC remy.jovanovic@edu.ece.fr
