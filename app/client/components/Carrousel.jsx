@@ -54,7 +54,7 @@ const Carrousel = () => {
         onClick={handlePrevSlide}
         className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
       />
-      <div className="w-full h-[50vh] flex overflow-hidden relative m-auto ">
+      <div className="w-full h-[50vh] flex overflow-hidden relative m-auto carousel">
         <Swipe
           onSwipeLeft={handleNextSlide}
           onSwipeRight={handlePrevSlide}
@@ -63,18 +63,14 @@ const Carrousel = () => {
           {images.map((image, index) => {
             if (index === currentSlide) {
               return (
-                <Link href={"/articles/article/" + image.id} key={image.id}>
+                <Link href={"/articles/article/" + image.id} key={image.id} className="relative w-full h-full carousel-item">
                   <img
                     key={image.id}
                     src={
                       "https://icqmzeicgyxwjelgqbfp.supabase.co/storage/v1/object/public/images/" +
                       image.image
                     }
-                    layout="fill"
-                    objectFit="contain"
-                    className="animate-fadeIn object-cover w-full h-full absolute z-10 opacity-100 "
-                    height="50%"
-                    width="50%"
+                    className=" rounded-box object-cover w-full h-full carousel-item"
                   />
                 </Link>
               );
