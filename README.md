@@ -515,6 +515,20 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   ![Image](/pictures/image2.png)
 
+- Ajout d'un carrousel:
+
+  ![Image](/pictures/carrousel.png)
+
+  - Il permet de mettre en avant les articles.
+
+  - Il est intégré dans la page d'accueil.
+
+  - Il possède des boutons pour naviguer entre les articles.
+
+  - Chaque article est cliquable et renvoie vers la page de l'article.
+
+
+
 ## Auteurs
 
 - Rémy JOVANOVIC remy.jovanovic@edu.ece.fr

@@ -22,7 +22,7 @@ export default function Articles() {
   const createArticle = async () => {
     router.push("/articles/CreaArticle");
   };
-  
+
   return (
     <>
       <Head>
@@ -31,10 +31,14 @@ export default function Articles() {
         <link rel="icon" href="/cyberpunk.png" />
       </Head>
 
-      <h2 id="student" className="text-center text-3xl font-bold w-full p-10 text-primary">
+      <h2
+        id="student"
+        className="text-center text-3xl font-bold w-full p-10 text-primary"
+      >
         Une liste de vos articles favoris :
       </h2>
 
+      <div className="flex flex-col">
         <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
           <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
             <table className="min-w-full divide-y divide-slate-300">
@@ -87,6 +91,7 @@ export default function Articles() {
             </table>
           </div>
         </div>
+      </div>
     </>
   );
 }

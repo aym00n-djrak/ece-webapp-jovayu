@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import Articles from "./articles/articlesforall"
 import Student from "../components/Student";
 import Tiny from "../components/WYSIWYG/tiny";
+import Carrousel from "../components/Carrousel";
 
 const Home = () => {
   const { user } = useContext(UserContext);
@@ -22,6 +23,7 @@ const Home = () => {
         <Student user={user} />
         <Tiny />
         <Projects />
+        <Carrousel />
       </div>
     </Layout>
   );

@@ -40,6 +40,7 @@ export default function MyComments() {
       <h1 className="wt-title m-4 text-2xl font-bold text-left text-primary" >
         Vos commentaires :
       </h1>
+      <div className="flex flex-col">
         <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
           <div className="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
             <table className="min-w-full divide-y divide-slate-300">
@@ -80,17 +81,24 @@ export default function MyComments() {
                 {contacts.map((contact) => (
                   <tr key={contact.email}>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
-                      {contact.created_at.split("T")[1].split(".")[0]} le{" "}
-                      {contact.created_at.split("T")[0]}
+                      <Link href={`/admin/contactsmes/${contact.id}`} className="text-zinc-900 hover:text-blue-500">
+                      {contact.created_at.split("T")[1].split(".")[0]+ " le "+ contact.created_at.split("T")[0]}
+                      </Link>
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
+                    <Link href={`/admin/contactsmes/${contact.id}`} className="text-zinc-900 hover:text-blue-500">
                       {contact.firstname}
+                    </Link>
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
+                    <Link href={`/admin/contactsmes/${contact.id}`} className="text-zinc-900 hover:text-blue-500">
                       {contact.lastname}
+                    </Link>
                     </td>
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
+                    <Link href={`/admin/contactsmes/${contact.id}`} className="text-zinc-900 hover:text-blue-500">
                       {contact.email}
+                    </Link>
                     </td>
                     <td>
                       <Link
@@ -111,6 +119,7 @@ export default function MyComments() {
             </table>
           </div>
         </div>
+      </div>
     </>
   );
 }

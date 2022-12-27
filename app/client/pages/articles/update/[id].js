@@ -78,7 +78,7 @@ export default function ArticlesUpdate({ id }) {
           {articles?.titre}{" "}
         </span>
       </h1>{" "}
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className="flex flex-col items-center">
         <div class="w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
           <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
             <textarea
@@ -92,8 +92,9 @@ export default function ArticlesUpdate({ id }) {
             ></textarea>
             <input type="file" name="file" id="file" onChange={InsertImage} />
           </div>
+          
           <div class="flex items-center justify-between px-3 py-2 border-t dark:border-gray-600">
-            <div class="flex items-center space-x-2">
+            <div class=" items-center space-x-2">
               <input
                 type="text"
                 name="titre"
