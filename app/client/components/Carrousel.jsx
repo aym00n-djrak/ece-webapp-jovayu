@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Swipe from "react-easy-swipe";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import Link from "next/link";
 
 const Carrousel = () => {
   const [images, setImages] = useState([]);
@@ -59,7 +60,7 @@ const Carrousel = () => {
         {images.map((image, index) => {
           if (index === currentSlide) {
             return (
-              <a href={"/articles/article/" + image.id} key={image.id}>
+              <Link href={"/articles/article/" + image.id} key={image.id}>
               <img
                 key={image.id}
                 src={"https://icqmzeicgyxwjelgqbfp.supabase.co/storage/v1/object/public/images/"+image.image}
@@ -69,7 +70,7 @@ const Carrousel = () => {
                 height="50%"
                 width="50%"
               />
-              </a>
+              </Link>
             );
           }
         })}
