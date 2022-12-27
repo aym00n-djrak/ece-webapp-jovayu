@@ -7,6 +7,9 @@ import { useRouter } from "next/router";
 import { useContext } from "react";
 import UserContext from "../../../components/UserContext";
 import Images from "../../../components/Images";
+import { FcLike } from "react-icons/fc";
+import { BiLike } from "react-icons/bi";
+import { BiDislike } from "react-icons/bi";
 
 export default function Articles({ id }) {
   const router = useRouter();
@@ -14,15 +17,17 @@ export default function Articles({ id }) {
   const [articles, setArticle] = useState(null);
   const [comments, setComments] = useState([]);
   const supabase = useSupabaseClient();
+  const [like, setLike] = useState(0);
 
   useEffect(() => {
     (async () => {
       let { data, error, status } = await supabase
         .from("articles")
-        .select(`titre, contenu, auteur, user_id`)
+        .select(`titre, contenu, auteur, user_id,like`)
         .eq("id", id)
         .single();
       setArticle(data);
+      setLike(data.like);
     })();
   }, [id, supabase]);
 
@@ -74,6 +79,23 @@ export default function Articles({ id }) {
     router.push(`/articles/comment/${id}`);
   };
 
+  const likeArticle = async (article) => {
+    const { data, error } = await supabase
+      .from("articles")
+      .update({ like: article.like + 1 })
+      .eq("id", id);
+      setLike(article.like + 1);
+  };
+
+  const UnlikeArticle = async (article) => {
+    const { data, error } = await supabase
+      .from("articles")
+      .update({ like: article.like - 1 })
+      .eq("id", id);
+      setLike(article.like - 1);
+    };
+
+
   return (
     <>
       <Layout>
@@ -98,7 +120,9 @@ export default function Articles({ id }) {
                 <dt>Auteur</dt>
                 <dd className="text-zinc-900">{articles.auteur}</dd>
                 <dt></dt>
-                <dd className="text-zinc-900"><Images id={id} /></dd>
+                <dd className="text-zinc-900">
+                  <Images id={id} />
+                </dd>
               </dl>
             </div>
             <div className="px-3 py-10 text-primary">
@@ -110,7 +134,25 @@ export default function Articles({ id }) {
             </div>
           </div>
         )}
-
+        <div className="flex items-center text-secondary m-2">
+          <div className="flex items-center text-secondary m-2">
+            {like} <FcLike />
+          </div>
+          <div className="flex items-center text-secondary m-2">
+            <button
+              onClick={() => likeArticle(articles)}
+              className="ml-2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+            >
+              <BiLike />
+            </button>
+            <button
+              onClick={() => UnlikeArticle(articles)}
+              className="ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+            >
+              <BiDislike />
+            </button>
+          </div>
+        </div>
         {articles && articles.user_id === user?.id && (
           <>
             <div className="flex space-x-2 justify-center p-2">
@@ -164,7 +206,10 @@ export default function Articles({ id }) {
             <table className="min-w-full divide-y divide-slate-300 ">
               <tbody className="divide-y divide-slate-200 bg-white ">
                 {comments.map((comment) => (
-                  <div className="overflow-hidden divide-y divide-zinc-700 shadow ring-1 ring-black ring-opacity-5 md:rounded-lg" key={comment.id}>
+                  <div
+                    className="overflow-hidden divide-y divide-zinc-700 shadow ring-1 ring-black ring-opacity-5 md:rounded-lg"
+                    key={comment.id}
+                  >
                     <div className="bg-slate-50">
                       <dl className="grid grid-cols-[auto_1fr] px-3 py-4 [&_dt]:italic [&_dt]:text-zinc-700 [&_dt]:pr-3">
                         <dt>Email</dt>

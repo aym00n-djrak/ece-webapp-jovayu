@@ -5,6 +5,7 @@ import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import Layout from "../../layout";
 import { useRouter } from 'next/router'
+import { FcLike } from "react-icons/fc";
 
 export default function Articles() {
   const router = useRouter();
@@ -15,7 +16,7 @@ export default function Articles() {
     (async () => {
       let { data, error, status } = await supabase
         .from("articles")
-        .select(`id, titre, contenu, auteur`);
+        .select(`id, titre, contenu, auteur,like`);
       setArticles(data);
     })();
   }, [supabase]);
@@ -55,6 +56,12 @@ export default function Articles() {
                     scope="col"
                     className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
                   >
+                    Like
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-3 py-3.5 text-left text-sm font-semibold text-slate-900"
+                  >
                   </th>
                 </tr>
               </thead>
@@ -67,7 +74,11 @@ export default function Articles() {
                     <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
                       {article.auteur}
                     </td>
-
+                    <td className="whitespace-nowrap px-3 py-4 text-sm text-zinc-900">
+                      <div className="flex items-center">
+                        {article.like} <FcLike />
+                      </div>
+                    </td>
                     <td>
                       <Link
                         className={

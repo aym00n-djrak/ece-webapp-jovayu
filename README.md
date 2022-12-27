@@ -527,6 +527,13 @@ Voilà, vous pouvez enfin naviguer sur un site prêt à être déployé!
 
   - Chaque article est cliquable et renvoie vers la page de l'article.
 
+- Ajout de like:
+
+  ![Image](/pictures/like.png)
+
+- Affichage des likes:
+
+  ![Image](/pictures/like2.png)
 
 
 ## Auteurs

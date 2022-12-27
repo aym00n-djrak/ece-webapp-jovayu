@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Projects from "../components/Projects";
 import Layout from "../layout";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UserContext from "../components/UserContext";
 import Header from "../components/Header";
 import Articles from "./articles/articlesforall"
@@ -11,6 +11,7 @@ import Carrousel from "../components/Carrousel";
 
 const Home = () => {
   const { user } = useContext(UserContext);
+
   return (
     <Layout>
       <div>
